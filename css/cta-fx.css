@@ -1,0 +1,49 @@
+/* Premium IT-themed animated background for CTA banners */
+.cta-banner{isolation:isolate;
+  background:linear-gradient(120deg,#0b2a5b,#1457d6 38%,#2b8cff 62%,#0b3d91)!important;background-size:240% 240%!important;
+  animation:ctaShift 16s ease-in-out infinite;
+  box-shadow:0 30px 70px -30px rgba(20,87,214,.55),inset 0 1px 0 rgba(255,255,255,.25)}
+@keyframes ctaShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.cta-banner>*:not(.cta-fx){position:relative;z-index:2}
+.cta-fx{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;border-radius:inherit}
+.cta-fx svg{position:absolute;inset:0;width:100%;height:100%}
+/* moving tech grid */
+.cta-fx .grid{position:absolute;inset:-60px;opacity:.22;
+  background-image:linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(75% 90% at 50% 50%,#000 20%,transparent 80%);mask-image:radial-gradient(75% 90% at 50% 50%,#000 20%,transparent 80%);
+  animation:ctaGrid 14s linear infinite}
+@keyframes ctaGrid{to{transform:translate(44px,44px)}}
+/* circuit traces with flowing data pulses */
+.cta-fx .trace{fill:none;stroke:rgba(255,255,255,.28);stroke-width:1.2}
+.cta-fx .pulse{fill:none;stroke:#bfe6ff;stroke-width:2;stroke-linecap:round;stroke-dasharray:40 460;filter:drop-shadow(0 0 4px #8fd0ff);animation:ctaFlow 5s linear infinite}
+.cta-fx .pulse.p2{animation-duration:7s;animation-delay:-2s}.cta-fx .pulse.p3{animation-duration:6s;animation-delay:-4s}
+@keyframes ctaFlow{to{stroke-dashoffset:-500}}
+.cta-fx .node{fill:#cfeaff;opacity:.8;animation:ctaBlink 3s ease-in-out infinite}
+.cta-fx .node:nth-of-type(2n){animation-delay:-1.2s}
+@keyframes ctaBlink{0%,100%{opacity:.25}50%{opacity:1}}
+/* floating thin-line tech glyphs */
+.cta-fx .g{position:absolute;color:rgba(255,255,255,.5);animation:ctaFloat 11s ease-in-out infinite}
+.cta-fx .g svg{position:static;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+@keyframes ctaFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(6deg)}}
+/* glow orbs + shine sweep */
+.cta-fx .orb{position:absolute;border-radius:50%;filter:blur(40px);opacity:.55;animation:ctaOrb 12s ease-in-out infinite alternate}
+.cta-fx .o1{width:300px;height:300px;left:-80px;top:-100px;background:#5cc8ff}
+.cta-fx .o2{width:260px;height:260px;right:-60px;bottom:-110px;background:#7a8cff;animation-delay:-5s}
+@keyframes ctaOrb{to{transform:translate(50px,30px) scale(1.15)}}
+.cta-fx .shine{position:absolute;top:0;bottom:0;width:30%;left:-40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.16),transparent);transform:skewX(-18deg);animation:ctaShine 7s ease-in-out infinite}
+@keyframes ctaShine{0%,60%{left:-40%}100%{left:130%}}
+@media (max-width:640px){.cta-fx .g:nth-of-type(n+5){display:none}.cta-fx .grid{background-size:34px 34px}}
+@media (prefers-reduced-motion:reduce){.cta-banner,.cta-fx *{animation:none!important}}
+.cta-fx>svg{-webkit-mask-image:radial-gradient(ellipse 34% 55% at 50% 50%,transparent 40%,#000 100%);mask-image:radial-gradient(ellipse 34% 55% at 50% 50%,transparent 40%,#000 100%)}
+
+/* Same IT-themed animated layer on the About hero */
+.about-hero{isolation:isolate;
+  background:linear-gradient(120deg,#0b2a5b,#1457d6 38%,#2b8cff 62%,#0b3d91)!important;background-size:240% 240%!important;
+  animation:ctaShift 16s ease-in-out infinite}
+.about-hero::after{z-index:0}
+.about-hero>*:not(.cta-fx){position:relative;z-index:2}
+.about-hero .cta-fx{border-radius:0}
+.about-hero .cta-fx>svg{-webkit-mask-image:radial-gradient(ellipse 42% 62% at 50% 50%,transparent 45%,#000 100%);mask-image:radial-gradient(ellipse 42% 62% at 50% 50%,transparent 45%,#000 100%)}
+.about-hero .cta-fx .g{animation-duration:13s}
+.about-hero .cta-fx .g[style*="left:6%"],.about-hero .cta-fx .g[style*="left:32%"],.about-hero .cta-fx .g[style*="left:50%"],.about-hero .cta-fx .g[style*="left:70%"]{display:none}

@@ -1,0 +1,134 @@
+/* =========================================================
+   NDR EdTech — Responsive Stylesheet
+   Breakpoints: 1440 / 1200 / 1024 / 768 / 480 / 375
+   ========================================================= */
+
+/* ---------- 1440px and below: tighten container ---------- */
+@media (max-width: 1440px) {
+  .container { max-width: 1360px; }
+}
+
+/* ---------- 1200px: reduce grid density slightly ---------- */
+@media (max-width: 1200px) {
+  .why-grid, .projects-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .modes-grid { grid-template-columns: repeat(2, 1fr); }
+  .trainers-grid { grid-template-columns: repeat(3, 1fr); }
+  .timeline { grid-template-columns: repeat(3, 1fr); }
+  .timeline.timeline-4 { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); row-gap: 32px; }
+  .audience-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- 1240px: collapse nav to hamburger ----------
+   The full desktop nav (8 links + 2 buttons) needs ~1220px of width to
+   avoid wrapping/overflow, so it switches to the hamburger a little
+   before the 1200/1024 layout breakpoints rather than exactly at 1024px. */
+/* Laptops (1025–1240px): keep the full desktop nav, just compact it. */
+@media (min-width: 1025px) and (max-width: 1240px) {
+  .nav-wrap { gap: 12px; padding: 0 16px; }
+  .brand { font-size: 1rem; gap: 8px; }
+  .main-nav { gap: 0; }
+  .main-nav a { padding: 8px 9px; font-size: 0.86rem; }
+  .nav-actions { gap: 8px; }
+  .nav-actions .btn { padding: 9px 14px; font-size: 0.84rem; }
+}
+@media (max-width: 1024px) {
+  .main-nav { display: none; }
+  .hamburger { display: inline-flex; }
+  /* Spec: mobile header shows only the logo + hamburger — both header
+     CTA buttons move into the slide-down mobile nav panel instead. */
+  .site-header > .nav-wrap > .nav-actions .btn { display: none; }
+}
+
+/* ---------- 1024px: stack heroes and two-column layouts ---------- */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { max-width: 480px; margin: 0 auto; }
+  .hero-cta-row .btn:nth-child(3) { display: none; }
+
+  .cd-hero-inner { grid-template-columns: 1fr; }
+  .cd-visual { max-width: 520px; margin: 0 auto; }
+  .cd-body { grid-template-columns: 1fr; }
+  .cd-sidebar { position: static; }
+
+  .snowflake-feature { grid-template-columns: 1fr; padding: 44px; }
+  .snowflake-visual { max-width: 420px; margin: 0 auto; }
+
+  .about-split { grid-template-columns: 1fr; }
+  .about-split .visual-order-2 { order: -1; }
+
+  .contact-layout { grid-template-columns: 1fr; }
+
+  .demo-layout { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- 768px: tablet / large mobile ---------- */
+@media (max-width: 768px) {
+  :root { --header-h: 72px; --header-h-scrolled: 60px; }
+  .section { padding: 64px 0; }
+  .section-tight { padding: 48px 0; }
+
+  .why-grid, .projects-grid, .related-grid, .modes-grid { grid-template-columns: 1fr; }
+  .modes-grid.modes-secondary { grid-template-columns: 1fr; }
+  .trainers-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .audience-grid { grid-template-columns: repeat(2, 1fr); }
+  .approach-list { grid-template-columns: 1fr; }
+  .cd-list { grid-template-columns: 1fr; }
+
+  .hero-inner { padding: 56px 20px 72px; }
+  .hero-cta-row { flex-direction: column; align-items: stretch; }
+  .hero-cta-row .btn:nth-child(3) { display: inline-flex; }
+  .hero-trust { gap: 18px; }
+
+  .form-row { grid-template-columns: 1fr; }
+  .form-card { padding: 26px; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  .mobile-sticky-bar { display: block; }
+  .whatsapp-float { bottom: 78px; }
+
+  .section-head.align-left { text-align: center; }
+  .contact-card, .demo-info { text-align: left; }
+}
+
+/* ---------- 480px: mobile ---------- */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  .nav-wrap { padding: 0 16px; }
+  .brand span { display: none; }
+  .hero-eyebrow { font-size: 0.72rem; padding: 6px 14px; }
+  .hero-float-card { left: 12px; bottom: 12px; padding: 10px 14px; }
+  .hero-float-card strong { font-size: 0.85rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .why-card, .mode-card, .form-card, .sidebar-card { padding: 22px 18px; }
+  .snowflake-feature { padding: 28px 20px; }
+  .cta-banner { padding: 40px 22px; }
+  .filter-row { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }
+  .filter-btn { flex-shrink: 0; }
+  .courses-toolbar { flex-direction: column; align-items: stretch; }
+  .search-box { min-width: 0; }
+  .contact-card { padding: 26px; }
+  .timeline { grid-template-columns: 1fr; }
+  .timeline.timeline-4 { grid-template-columns: 1fr; }
+  .trainers-grid { grid-template-columns: 1fr; }
+  .audience-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- 375px: small mobile ---------- */
+@media (max-width: 375px) {
+  .hero-trust { flex-direction: column; gap: 10px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .course-actions { flex-direction: column; }
+  .course-actions .btn { width: 100%; }
+}
+
+/* Utility: prevent any element from forcing horizontal scroll */
+img, video, iframe, table { max-width: 100%; }

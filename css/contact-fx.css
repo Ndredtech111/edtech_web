@@ -1,0 +1,84 @@
+/* Contact page: simple, calm entrance transitions (fade + short slide) */
+.page-contact .reveal{opacity:0;transform:translateY(26px);clip-path:none;filter:none}
+.page-contact .reveal.in-view{opacity:1;transform:none;transition:opacity .7s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+
+/* two columns glide in from their own side */
+.page-contact .contact-layout > .reveal:first-child{transform:translateX(-34px)}
+.page-contact .contact-layout > .reveal:last-child{transform:translateX(34px)}
+.page-contact .contact-layout > .reveal.in-view{transform:none}
+
+/* rows inside the info card appear one after another */
+.page-contact .contact-card.in-view .contact-detail{animation:cFade .6s cubic-bezier(.22,1,.36,1) both}
+.page-contact .contact-card.in-view .contact-detail:nth-of-type(1){animation-delay:.15s}
+.page-contact .contact-card.in-view .contact-detail:nth-of-type(2){animation-delay:.25s}
+.page-contact .contact-card.in-view .contact-detail:nth-of-type(3){animation-delay:.35s}
+.page-contact .contact-card.in-view .contact-detail:nth-of-type(4){animation-delay:.45s}
+.page-contact .contact-card.in-view .contact-social{animation:cFade .6s ease .55s both}
+@keyframes cFade{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+
+/* form fields rise in softly */
+.page-contact .form-card.in-view .form-group,.page-contact .reveal.in-view .form-card .form-group{animation:cRise .55s ease both}
+.page-contact .form-card .form-group:nth-child(1){animation-delay:.1s}
+.page-contact .form-card .form-group:nth-child(2){animation-delay:.18s}
+.page-contact .form-card .form-group:nth-child(3){animation-delay:.26s}
+.page-contact .form-card .form-group:nth-child(4){animation-delay:.34s}
+@keyframes cRise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+@media (max-width:900px){
+  .page-contact .contact-layout > .reveal:first-child,.page-contact .contact-layout > .reveal:last-child{transform:translateY(26px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .page-contact .reveal{opacity:1;transform:none}
+  .page-contact *{animation:none!important;transition:none!important}
+}
+
+/* ===== Desktop: compact layout so the hero, info card and enquiry form fit one screen ===== */
+@media (min-width:1000px){
+  .page-contact .page-hero{padding:24px 0 28px}
+  .page-contact .page-hero h1{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-bottom:6px}
+  .page-contact .page-hero p{margin-top:8px;font-size:.98rem}
+  .page-contact .ct-env{top:26px;width:112px;height:82px}
+  .page-contact .ct-map{top:18px;width:172px;height:118px}
+
+  .page-contact .section{padding:26px 0 40px}
+  .page-contact .contact-layout{gap:32px;grid-template-columns:.8fr 1.2fr}
+
+  .page-contact .contact-card{padding:26px 30px}
+  .page-contact .contact-card h2{font-size:1.65rem;margin-bottom:6px}
+  .page-contact .contact-card > p{margin-bottom:16px;font-size:.92rem}
+  .page-contact .contact-detail{margin-bottom:12px;gap:12px}
+  .page-contact .contact-detail .c-icon{width:38px;height:38px;flex-shrink:0}
+  .page-contact .contact-detail strong{font-size:.9rem;margin-bottom:0}
+  .page-contact .contact-detail span,.page-contact .contact-detail a{font-size:.84rem;line-height:1.45}
+  .page-contact .contact-social{margin-top:14px}
+  .page-contact .contact-social a{width:36px;height:36px}
+
+  .page-contact .form-card{padding:22px 26px}
+  .page-contact .form-group{margin-bottom:11px}
+  .page-contact .form-group label{font-size:.8rem;margin-bottom:4px}
+  .page-contact .form-group input,.page-contact .form-group select,.page-contact .form-group textarea{padding:9px 14px;font-size:.95rem}
+  .page-contact .form-group textarea{min-height:0;height:62px}
+  .page-contact .form-card .btn{padding-top:11px;padding-bottom:11px}
+  .page-contact .form-note{margin:8px 0 0;font-size:.78rem}
+  .page-contact .map-wrap{margin-top:18px}
+}
+/* shorter laptop screens: tighten a little more */
+@media (min-width:1000px) and (max-height:780px){
+  .page-contact .page-hero{padding:16px 0 20px}
+  .page-contact .page-hero p{display:none}
+  .page-contact .ct-env{width:92px;height:68px;top:14px}
+  .page-contact .ct-map{width:150px;height:78px;top:12px}
+  .page-contact .section{padding:18px 0 30px}
+  .page-contact .contact-card{padding:20px 26px}
+  .page-contact .contact-detail{margin-bottom:8px}
+  .page-contact .form-card{padding:16px 22px}
+  .page-contact .form-group{margin-bottom:8px}
+  .page-contact .form-group textarea{height:50px}
+}
+
+/* Desktop: the contact content fills exactly the first screen, so the footer starts on the next one */
+@media (min-width:1000px){
+  .page-contact main{min-height:calc(100vh - var(--header-h,84px));min-height:calc(100svh - var(--header-h,84px));display:flex;flex-direction:column}
+  .page-contact main > .section{flex:1;display:flex;align-items:center;padding:20px 0}
+  .page-contact main > .section > .container{width:100%}
+}

@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NDR EdTech | IT Training Institute in Bangalore</title>
+<meta name="description" content="NDR EdTech provides practical IT training, hands-on projects and career-focused technology courses in Bangalore and online. Learn. Build. Get Career Ready.">
+<meta name="keywords" content="NDR EdTech, IT training Bangalore, Snowflake training, Python course, Azure DevOps training, AWS DevOps, Power BI course, Cyber Security training, data engineering course">
+<link rel="canonical" href="https://www.ndredtech.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NDR EdTech | IT Training Institute in Bangalore">
+<meta property="og:description" content="Master in-demand IT technologies through expert-led training, hands-on projects and career-focused support.">
+<meta property="og:image" content="assets/hero/hero-image.jpg">
+<meta property="og:url" content="https://www.ndredtech.com/">
+<meta name="theme-color" content="#0E1A2B">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="icon" href="assets/logo/ndr-edtech-logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@800&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0E1A2B; --ink-2:#17263D; --ink-3:#22344F;
+  --paper:#FAF8F4; --surface:#FFFFFF; --sand:#F2EEE6;
+  --line:#E6E0D5; --line-dark:rgba(255,255,255,.12);
+  --text:#1A2333; --muted:#5D6778; --muted-light:#A9B3C4;
+  --accent:#1F4FD8; --accent-ink:#163BA6; --accent-soft:#EAF0FD;
+  --gold:#C49A4A; --gold-soft:#F6EEDD;
+  --radius:18px; --radius-sm:12px;
+  --shadow-sm:0 1px 2px rgba(14,26,43,.06),0 2px 8px rgba(14,26,43,.04);
+  --shadow:0 10px 30px -12px rgba(14,26,43,.18),0 2px 6px rgba(14,26,43,.05);
+  --shadow-lg:0 30px 60px -20px rgba(14,26,43,.30);
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --container:100%;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;color:var(--ink);line-height:1.15}
+h1,h2{font-family:var(--serif);font-weight:600;letter-spacing:-.02em}
+h3{font-size:1.08rem;font-weight:600;letter-spacing:-.005em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 clamp(16px,3vw,56px)}
+.section{padding:112px 0}
+.section-sand{background:var(--sand)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:currentColor}
+.section-head{max-width:680px;margin-bottom:56px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head.center .eyebrow::after{content:"";width:22px;height:1.5px;background:currentColor}
+.section-head h2{font-family:"Plus Jakarta Sans","Inter",sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.12;font-size:clamp(2rem,3.6vw,2.9rem);margin-top:14px;background:linear-gradient(90deg,#06b6d4 0%,#3b82f6 50%,#8b5cf6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.08em}
+.section-head p{margin-top:16px;color:var(--muted);font-size:1.075rem}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:56px}
+.head-row .section-head{margin-bottom:0}
+
+.skip-link{position:absolute;left:-999px;top:12px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:200}
+.skip-link:focus{left:12px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:.95rem;border:1.5px solid transparent;transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease;white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .2s ease}
+.btn:hover svg{transform:translateX(3px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px -8px rgba(31,79,216,.55)}
+.btn-primary:hover{background:var(--accent-ink);transform:translateY(-1px)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-3);transform:translateY(-1px)}
+.btn-outline{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:var(--gold-soft);transform:translateY(-1px)}
+.btn-ghost-light{border-color:rgba(255,255,255,.28);color:#fff}
+.btn-ghost-light:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-sm{padding:10px 18px;font-size:.88rem}
+.btn-block{width:100%}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
+.site-header.scrolled{border-color:var(--line);box-shadow:0 6px 20px -16px rgba(14,26,43,.25)}
+
+/* Sky-blue liquid glass header */
+.site-header{background:linear-gradient(120deg,rgba(125,196,250,.58),rgba(190,228,252,.42) 45%,rgba(120,185,248,.55))!important;backdrop-filter:blur(20px) saturate(190%)!important;-webkit-backdrop-filter:blur(20px) saturate(190%)!important;border-bottom:1px solid rgba(255,255,255,.6)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -1px 0 rgba(90,160,230,.18),0 10px 30px -12px rgba(50,130,220,.35)!important;isolation:isolate}
+.site-header::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(120% 160% at 15% -40%,rgba(255,255,255,.65),rgba(255,255,255,0) 55%),radial-gradient(60% 120% at 90% 120%,rgba(255,255,255,.35),rgba(255,255,255,0) 60%)}
+.site-header.scrolled{background:linear-gradient(120deg,rgba(110,185,246,.72),rgba(175,220,251,.58) 45%,rgba(105,175,244,.7))!important}
+.site-header .main-nav a{color:#17365c}
+.site-header .main-nav a:hover,.site-header .main-nav a.active,.site-header .main-nav a[aria-current="page"]{color:#071A41;background:rgba(255,255,255,.4)}
+.site-header .brand{color:#071A41}
+.site-header .btn-outline,.site-header .nav-actions .btn:not(.btn-primary){background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.8)}
+.nav-wrap{max-width:var(--container);margin:0 auto;padding:0 clamp(16px,3vw,56px);height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:12px;font-weight:700;color:var(--ink);font-size:1.08rem;letter-spacing:-.01em}
+.brand img{height:40px;width:auto}
+.brand-mark{display:none;width:40px;height:40px;border-radius:11px;background:var(--ink);color:#fff;font-family:var(--serif);font-weight:700;font-size:.95rem;align-items:center;justify-content:center}
+.brand.no-logo .brand-mark{display:inline-flex}
+.main-nav{display:flex;gap:4px}
+.main-nav a{white-space:nowrap;padding:8px 11px;border-radius:8px;font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s,background .2s}
+.main-nav a:hover{color:var(--ink);background:rgba(14,26,43,.04)}
+.main-nav a[aria-current="page"]{color:var(--ink);font-weight:600}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.hamburger{display:none;width:44px;height:44px;border:1px solid var(--line);background:var(--surface);border-radius:12px;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.hamburger span{width:18px;height:1.6px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .25s}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
+.mobile-nav{display:none;position:fixed;inset:76px 0 0 0;background:var(--paper);z-index:99;padding:20px 24px 120px;overflow-y:auto;flex-direction:column}
+.mobile-nav.open{display:flex}
+.mobile-nav > a{padding:16px 4px;border-bottom:1px solid var(--line);font-size:1.1rem;font-weight:500;color:var(--ink)}
+.mobile-nav .nav-actions{flex-direction:column;align-items:stretch;margin-top:24px;gap:12px}
+
+/* Hero */
+.hero{position:relative;padding:80px 0 96px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 400px at 85% 10%,rgba(31,79,216,.10),transparent 70%),
+  radial-gradient(500px 360px at 10% 90%,rgba(196,154,74,.10),transparent 70%);pointer-events:none}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 10px;border:1px solid var(--line);background:var(--surface);border-radius:999px;font-size:.84rem;font-weight:500;color:var(--ink-3);box-shadow:var(--shadow-sm)}
+.hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:#1BA672;box-shadow:0 0 0 4px rgba(27,166,114,.15)}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.3rem);margin:26px 0 22px;line-height:1.05}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:1.15rem;color:var(--muted);max-width:540px}
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:600;font-size:.95rem;color:var(--ink);border-bottom:1.5px solid var(--gold);padding-bottom:2px}
+.hero-link:hover{color:var(--accent)}
+.hero-trust{display:flex;gap:0;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.hero-trust div{padding-right:28px;margin-right:28px;border-right:1px solid var(--line)}
+.hero-trust div:last-child{border:0;margin:0;padding:0}
+.hero-trust b{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--ink);line-height:1.1}
+.hero-trust span{font-size:.86rem;color:var(--muted)}
+
+.hero-visual{position:relative}
+.hero-frame{position:relative;border-radius:24px;overflow:hidden;background:var(--ink);aspect-ratio:4/4.3;box-shadow:var(--shadow-lg)}
+.hero-frame img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.hero-frame img.loaded{opacity:1}
+.visual-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:rgba(255,255,255,.7);font-weight:500;background:
+  radial-gradient(circle at 30% 20%,rgba(31,79,216,.45),transparent 55%),
+  radial-gradient(circle at 80% 85%,rgba(196,154,74,.35),transparent 50%),var(--ink)}
+.visual-fallback svg{width:56px;height:56px}
+.float-card{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px;display:flex;align-items:center;gap:12px;font-size:.88rem}
+.float-card strong{display:block;color:var(--ink);font-size:.95rem}
+.float-card span{color:var(--muted);font-size:.8rem}
+.float-card .fc-icon{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex-shrink:0}
+.float-card .fc-icon svg{width:20px;height:20px}
+.fc-1{left:-36px;bottom:56px;animation:cardIn .8s cubic-bezier(.2,.7,.2,1) 1.1s both,float 6s ease-in-out 1.9s infinite}
+.fc-1 .fc-icon{background:var(--accent-soft);color:var(--accent)}
+.fc-2{right:-24px;top:40px;animation:cardIn .8s cubic-bezier(.2,.7,.2,1) 1.3s both,float 6s ease-in-out 2.6s infinite}
+.fc-2 .fc-icon{background:var(--gold-soft);color:#9A7430}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* Stats */
+.stats-band{background:var(--ink);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.stat-item{padding:40px 24px;text-align:center;border-right:1px solid var(--line-dark)}
+.stat-item:last-child{border-right:0}
+.stat-number{font-family:var(--serif);font-size:2.1rem;font-weight:600;line-height:1.1;color:#fff}
+.stat-label{margin-top:6px;font-size:.86rem;color:var(--muted-light);letter-spacing:.02em}
+
+/* Snowflake feature */
+.feature{display:grid;grid-template-columns:1.05fr .95fr;background:var(--ink);color:#fff;border-radius:28px;overflow:hidden;position:relative}
+.feature::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(41,181,232,.22),transparent 65%);pointer-events:none}
+.feature-body{padding:64px}
+.feature .eyebrow{color:var(--gold)}
+.feature h2{color:#fff;font-size:clamp(1.9rem,3.3vw,2.7rem);margin-top:16px}
+.feature .lead{color:var(--muted-light);font-size:1.06rem;margin-top:16px;max-width:560px}
+.topic-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 24px;margin:36px 0 40px;padding:0;list-style:none}
+.topic-list li{display:flex;align-items:center;gap:10px;font-size:.93rem;color:#E3E8F0}
+.topic-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.feature-cta{display:flex;gap:12px;flex-wrap:wrap}
+.feature-visual{position:relative;display:grid;place-items:center;border-left:1px solid var(--line-dark);background:linear-gradient(180deg,var(--ink-2),var(--ink))}
+.feature-visual .ring{width:240px;height:240px;border-radius:50%;border:1px solid var(--line-dark);display:grid;place-items:center;position:relative}
+.feature-visual .ring::before{content:"";position:absolute;inset:-36px;border-radius:50%;border:1px dashed rgba(255,255,255,.10)}
+.feature-visual img{width:120px;height:auto;animation:spin 40s linear infinite}
+.feature-visual .snow-fallback{width:110px;height:110px;color:#29B5E8;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.feature-visual .orbit span{cursor:pointer}
+.topic-modal{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;background:rgba(6,12,22,.66);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.topic-modal.open{opacity:1;visibility:visible}
+.tm-card{position:relative;width:100%;max-width:560px;max-height:88vh;overflow:auto;background:linear-gradient(180deg,#13243a,#0c1828);color:#E3E8F0;border:1px solid rgba(41,181,232,.35);border-radius:24px;padding:36px;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 60px rgba(41,181,232,.12);transform:translateY(18px) scale(.96);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.topic-modal.open .tm-card{transform:none}
+.tm-icon{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#7FD3F5;background:radial-gradient(circle at 30% 25%,rgba(41,181,232,.3),rgba(41,181,232,.08));border:1px solid rgba(41,181,232,.45)}
+.tm-icon svg{width:28px;height:28px}
+.tm-card h3{font-family:var(--serif);font-size:1.7rem;color:#fff;margin:18px 0 10px;line-height:1.2}
+.tm-card p{color:#B9C4D6;margin:0 0 18px;font-size:1rem}
+.tm-card ul{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:10px}
+.tm-card li{display:flex;gap:10px;font-size:.94rem;color:#E3E8F0}
+.tm-card li::before{content:"";width:6px;height:6px;margin-top:9px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.tm-x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:1.3rem;line-height:1;cursor:pointer}
+.tm-x:hover{background:rgba(255,255,255,.14)}
+@media (max-width:520px){.tm-card{padding:28px 22px}}
+.feature-visual{min-height:520px;overflow:hidden}
+.feature-visual .orbit{position:absolute;inset:0;margin:0;padding:0;list-style:none;animation:spin 45s linear infinite}
+.feature-visual .orbit:hover,.feature-visual .orbit:hover span{animation-play-state:paused}
+.feature-visual .orbit li{position:absolute;top:50%;left:50%;width:0;height:0;transform:rotate(var(--a)) translateX(150px) rotate(calc(-1 * var(--a)))}
+.feature-visual .orbit span{position:absolute;left:0;top:0;translate:-50% -50%;width:50px;height:50px;display:grid;place-items:center;color:#7FD3F5;background:radial-gradient(circle at 30% 25%,rgba(41,181,232,.28),rgba(41,181,232,.08));border:1px solid rgba(41,181,232,.4);border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,.35);animation:spin 45s linear infinite reverse;transition:color .3s,border-color .3s,box-shadow .3s}
+.feature-visual .orbit span:hover{color:#fff;border-color:#29B5E8;box-shadow:0 0 22px rgba(41,181,232,.55)}
+.feature-visual .orbit span svg{width:24px;height:24px}
+@media (prefers-reduced-motion:reduce){.feature-visual .orbit,.feature-visual .orbit span{animation:none}}
+@media (max-width:900px){.feature-visual{min-height:480px}}
+@media (max-width:520px){.feature-visual .ring{transform:scale(.68)}.feature-visual{min-height:380px}}
+
+/* Why cards */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-card{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;align-items:flex-start;transition:transform .25s,box-shadow .25s,border-color .25s;color:var(--text)}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.why-top{display:flex;justify-content:space-between;align-items:center;width:100%;margin-bottom:28px}
+.why-icon{width:48px;height:48px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.why-icon svg{width:22px;height:22px}
+.why-index{font-family:var(--serif);font-size:.95rem;color:var(--muted-light);font-weight:600}
+.why-card h3{font-size:1.15rem;margin-bottom:10px}
+.why-card p{color:var(--muted);font-size:.95rem}
+.why-more{margin-top:auto;padding-top:22px;font-size:.88rem;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+.why-more svg{width:14px;height:14px;transition:transform .2s}
+.why-card:hover .why-more svg{transform:translateX(3px)}
+
+.why-modal{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:24px}
+.why-modal.open{display:flex}
+.why-modal-backdrop{position:absolute;inset:0;background:rgba(14,26,43,.55);backdrop-filter:blur(4px);animation:fade .2s ease}
+.why-modal-panel{position:relative;background:var(--surface);border-radius:22px;max-width:480px;width:100%;padding:40px;box-shadow:var(--shadow-lg);animation:pop .25s ease}
+.why-modal-close{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-size:1.3rem;color:var(--muted);line-height:1}
+.why-modal-close:hover{color:var(--ink);border-color:var(--ink)}
+.why-modal-panel h3{font-family:var(--serif);font-size:1.6rem;margin:20px 0 20px}
+.why-modal-points{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.why-modal-points li{display:flex;gap:12px;color:var(--text);font-size:.97rem}
+.why-modal-points li::before{content:"";flex-shrink:0;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F4FD8' stroke-width='3'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/12px no-repeat}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}}
+
+/* Modes */
+.modes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.mode-card{background:var(--surface);padding:36px 32px;transition:background .25s}
+.mode-card:hover{background:#FDFCFA}
+.mode-icon{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);margin-bottom:24px;transition:background .25s,color .25s,border-color .25s}
+.mode-icon svg{width:21px;height:21px}
+.mode-card:hover .mode-icon{background:var(--ink);color:#fff;border-color:var(--ink)}
+.mode-card h3{margin-bottom:8px}
+.mode-card p{color:var(--muted);font-size:.95rem}
+.mode-tag{display:inline-block;margin-left:8px;font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#9A7430;background:var(--gold-soft);padding:3px 8px;border-radius:999px;vertical-align:middle}
+
+/* Projects */
+.domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.domain{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:20px 22px;font-weight:600;color:var(--ink);transition:border-color .2s,transform .2s,box-shadow .2s}
+.domain:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.domain .num{font-family:var(--serif);font-size:.85rem;color:var(--muted-light);font-weight:600;min-width:22px}
+.domain svg{margin-left:auto;width:16px;height:16px;color:var(--muted-light);transition:color .2s,transform .2s}
+.domain:hover svg{color:var(--accent);transform:translateX(3px)}
+.domain .d-arrow{margin-left:auto}
+/* Sky-blue liquid glass tiles */
+.domain{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(120deg,rgba(125,196,250,.5),rgba(195,230,253,.38) 50%,rgba(120,185,248,.46));backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -1px 0 rgba(90,160,230,.15),0 8px 22px -12px rgba(50,130,220,.35);transition:border-color .3s,transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,background .35s}
+.domain::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(120% 180% at 10% -50%,rgba(255,255,255,.7),rgba(255,255,255,0) 55%);transition:opacity .35s}
+.domain::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;z-index:-1;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-18deg);transition:left .8s cubic-bezier(.2,.8,.2,1)}
+.domain:hover{background:linear-gradient(120deg,rgba(105,180,248,.68),rgba(175,222,252,.55) 50%,rgba(100,172,246,.64));border-color:rgba(255,255,255,.95);transform:translateY(-3px);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 16px 34px -12px rgba(50,130,220,.5)}
+.domain:hover::after{left:130%}
+.domain .num,.domain .d-arrow{color:#3b6a9c}
+.domain:hover .num{color:#071A41}
+@media (prefers-reduced-motion:reduce){.domain::after{display:none}}
+.domain .d-ico{margin:0 0 0 -8px;width:0;height:20px;opacity:0;transform:translateX(-10px) scale(.5) rotate(-20deg);color:var(--accent);overflow:hidden;flex-shrink:0;transition:width .45s cubic-bezier(.2,.8,.2,1),margin .45s cubic-bezier(.2,.8,.2,1),opacity .35s ease,transform .6s cubic-bezier(.34,1.56,.64,1)}
+.domain .d-ico *{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .8s cubic-bezier(.4,0,.2,1) .1s}
+.domain:hover .d-ico{width:22px;margin-left:0;opacity:1;transform:none;color:var(--accent)}
+.domain:hover .d-ico *{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.domain .d-ico,.domain .d-ico *{transition:none}}
+
+/* Process */
+.process{display:grid;grid-template-columns:repeat(6,1fr);position:relative;counter-reset:step}
+.process::before{content:"";position:absolute;top:27px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,var(--line),var(--gold),var(--line))}
+.step{position:relative;text-align:center;padding:0 10px}
+.step-num{width:56px;height:56px;margin:0 auto 20px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--ink);position:relative;z-index:1;transition:background .25s,color .25s,border-color .25s}
+.step:hover .step-num{background:var(--ink);color:#fff;border-color:var(--ink)}
+.step h3{font-size:1rem}
+.step-num>*{grid-area:1/1;transition:opacity .35s ease,transform .6s cubic-bezier(.34,1.56,.64,1)}
+.step-num .sn-ico{width:24px;height:24px;opacity:0;transform:rotate(-90deg) scale(.4)}
+.step-num .sn-ico *{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .8s cubic-bezier(.4,0,.2,1) .1s}
+.step:hover .sn-num{opacity:0;transform:rotate(90deg) scale(.4)}
+.step:hover .sn-ico{opacity:1;transform:none}
+.step:hover .sn-ico *{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.step-num>*,.step-num .sn-ico *{transition:none}}
+.center-cta{text-align:center;margin-top:56px}
+
+/* Testimonials */
+.t-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.t-slider{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:48px;box-shadow:var(--shadow-sm)}
+.t-slider::before{content:"\201C";position:absolute;top:8px;right:36px;font-family:var(--serif);font-size:9rem;line-height:1;color:var(--gold-soft)}
+.t-track{position:relative;min-height:220px}
+.t-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .45s,transform .45s,visibility .45s}
+.t-slide.active{position:relative;opacity:1;visibility:visible;transform:none}
+.t-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.04em;color:#9A7430;background:var(--gold-soft);padding:4px 10px;border-radius:999px}
+.t-quote{position:relative;font-family:var(--serif);font-size:1.45rem;line-height:1.45;color:var(--ink);margin:22px 0 28px;font-weight:500}
+.t-person{display:flex;align-items:center;gap:14px}
+.avatar{width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:600}
+.t-person strong{display:block;color:var(--ink);font-size:.97rem}
+.t-person span{font-size:.86rem;color:var(--muted)}
+.t-controls{display:flex;align-items:center;gap:14px;margin-top:36px}
+.t-arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;color:var(--ink);transition:background .2s,color .2s,border-color .2s}
+.t-arrow:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.t-arrow svg{width:16px;height:16px}
+.t-dots{display:flex;gap:8px;margin-left:auto}
+.t-dots button{width:8px;height:8px;border-radius:999px;border:0;background:var(--line);padding:0;transition:width .3s,background .3s}
+.t-dots button.active{width:26px;background:var(--ink)}
+
+/* CTA banner */
+.cta-banner{position:relative;overflow:hidden;background:var(--ink);border-radius:28px;padding:72px 64px;display:flex;align-items:center;justify-content:space-between;gap:40px;color:#fff;margin-bottom:96px}
+.cta-banner::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(500px 300px at 100% 0%,rgba(31,79,216,.45),transparent 70%),
+  radial-gradient(400px 260px at 0% 100%,rgba(196,154,74,.25),transparent 70%)}
+.cta-banner > *{position:relative}
+.cta-banner h2{color:#fff;font-size:clamp(1.8rem,3.2vw,2.6rem);max-width:620px}
+.cta-banner p{color:var(--muted-light);margin-top:12px;font-size:1.05rem}
+
+/* Demo form */
+.demo-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.demo-info h2{font-size:clamp(2rem,3.4vw,2.7rem);margin:14px 0 16px}
+.demo-info > p{color:var(--muted);font-size:1.06rem}
+.demo-highlights{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:24px}
+.demo-highlights li{display:flex;gap:16px}
+.h-icon{width:44px;height:44px;flex-shrink:0;border-radius:12px;background:var(--gold-soft);color:#9A7430;display:grid;place-items:center}
+.h-icon svg{width:19px;height:19px}
+.demo-highlights strong{display:block;color:var(--ink)}
+.demo-highlights span{color:var(--muted);font-size:.94rem}
+.contact-quick{margin-top:40px;padding-top:28px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 28px;font-size:.94rem}
+.contact-quick a{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink)}
+.contact-quick a:hover{color:var(--accent)}
+.contact-quick svg{width:16px;height:16px;color:var(--accent)}
+
+.form-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:44px;box-shadow:var(--shadow)}
+.form-card h3{font-family:var(--serif);font-size:1.5rem;margin-bottom:6px}
+.form-card .form-intro{color:var(--muted);font-size:.94rem;margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;font:inherit;font-size:.95rem;color:var(--text);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;transition:border-color .2s,background .2s,box-shadow .2s;appearance:none;-webkit-appearance:none}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235D6778' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:40px}
+.form-group textarea{min-height:110px;resize:vertical}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:0;border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(31,79,216,.10)}
+.form-error{display:none;font-size:.8rem;color:#C2362F;margin-top:6px}
+.form-group.invalid input,.form-group.invalid select{border-color:#C2362F}
+.form-group.invalid .form-error{display:block}
+.form-success{display:none;align-items:center;gap:10px;margin-top:16px;padding:14px 16px;border-radius:12px;background:#E9F7F0;color:#126B49;font-weight:500;font-size:.94rem}
+.form-success.show{display:flex}
+.form-note{margin-top:14px;font-size:.8rem;color:var(--muted);text-align:center}
+
+/* Footer */
+.site-footer{background:var(--ink);color:var(--muted-light);padding:88px 0 0;margin-top:0}
+.footer-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr 1.2fr 1.3fr;gap:40px}
+.footer-brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;font-size:1.1rem}
+.footer-brand img{height:42px;width:auto;background:#fff;border-radius:10px;padding:4px}
+.footer-col > p{margin-top:18px;font-size:.94rem;max-width:260px}
+.footer-col h4{color:#fff;font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+.footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:11px;font-size:.93rem}
+.footer-col a:hover{color:#fff}
+.footer-contact li{line-height:1.55}
+.footer-social{display:flex;gap:10px;margin-top:24px}
+.footer-social a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-dark);display:grid;place-items:center;transition:background .2s,border-color .2s}
+.footer-social a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)}
+.footer-social svg{width:17px;height:17px}
+.footer-map iframe{width:100%;height:190px;border:0;border-radius:14px;filter:grayscale(.35) contrast(1.05)}
+.footer-bottom{margin-top:64px;padding:26px 0;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
+.footer-legal{display:flex;gap:24px}
+
+/* Floating */
+.whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.6);transition:transform .2s}
+.whatsapp-float:hover{transform:scale(1.06)}
+.mobile-sticky-bar{display:none}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ===== Motion ===== */
+:root{--ease:cubic-bezier(.2,.7,.2,1)}
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:150;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),var(--gold));pointer-events:none}
+
+/* Hero entrance */
+.ha{animation:heroIn .9s var(--ease) both;animation-delay:var(--d,0s)}
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .w > span{display:inline-block;animation:wordUp 1s var(--ease) both}
+@keyframes wordUp{from{transform:translateY(110%)}to{transform:none}}
+.hero-frame{animation:frameIn 1.3s var(--ease) .35s both}
+@keyframes frameIn{from{opacity:0;clip-path:inset(10% 10% 10% 10% round 24px)}to{opacity:1;clip-path:inset(0 0 0 0 round 24px)}}
+.hero-frame img.loaded{animation:imgZoom 2.2s var(--ease) both}
+@keyframes imgZoom{from{transform:scale(1.14)}to{transform:scale(1)}}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+.hero-eyebrow .dot{animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(27,166,114,.45)}70%{box-shadow:0 0 0 9px rgba(27,166,114,0)}100%{box-shadow:0 0 0 0 rgba(27,166,114,0)}}
+.hero-visual{transition:transform .6s var(--ease);will-change:transform}
+.hero-link svg{transition:transform .2s}
+.hero-link:hover svg{transform:translateX(3px)}
+
+/* Staggered groups */
+.js [data-stagger] > *{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease),background .25s,border-color .2s,box-shadow .2s}
+.js [data-stagger].in > *{opacity:1;transform:none}
+.js .stats-grid[data-stagger] > *{transform:translateY(12px)}
+
+/* Eyebrow line draws in */
+.eyebrow::before,.section-head.center .eyebrow::after{transition:width .7s var(--ease) .25s}
+.js .reveal:not(.in) .eyebrow::before,.js .reveal:not(.in) .eyebrow::after{width:0}
+
+/* Career timeline draws itself */
+.process::before{transform:scaleX(0);transform-origin:0 50%;transition:transform 1.6s var(--ease) .2s}
+.process.in::before{transform:scaleX(1)}
+.js .process[data-stagger] > *{transform:translateY(14px) scale(.96)}
+.js .process[data-stagger].in > *{transform:none}
+
+/* Buttons: light sweep */
+.btn-primary,.btn-light,.btn-dark{position:relative;overflow:hidden;isolation:isolate}
+.btn-primary::after,.btn-light::after,.btn-dark::after{content:"";position:absolute;top:0;left:-75%;width:50%;height:100%;z-index:-1;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);transition:left .75s var(--ease)}
+.btn-light::after{background:linear-gradient(100deg,transparent,rgba(196,154,74,.25),transparent)}
+.btn-primary:hover::after,.btn-light:hover::after,.btn-dark:hover::after{left:130%}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* Card micro-interactions */
+.why-icon{transition:transform .35s var(--ease),background .25s,color .25s}
+.why-card:hover .why-icon{transform:translateY(-2px) rotate(-6deg);background:var(--accent);color:#fff}
+.mode-icon{transition:background .25s,color .25s,border-color .25s,transform .35s var(--ease)}
+.mode-card:hover .mode-icon{transform:scale(1.08)}
+.domain .num{transition:color .2s}
+.domain:hover .num{color:var(--accent)}
+.h-icon{transition:transform .35s var(--ease)}
+.demo-highlights li:hover .h-icon{transform:rotate(-8deg) scale(1.06)}
+.footer-social a{transition:background .2s,border-color .2s,transform .25s var(--ease)}
+.footer-social a:hover{transform:translateY(-3px)}
+
+/* Ambient glows */
+.feature::after{animation:drift 14s ease-in-out infinite alternate}
+.cta-banner::before{animation:drift2 16s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(-90px,70px)}}
+@keyframes drift2{from{transform:scale(1) translate(0,0)}to{transform:scale(1.15) translate(-30px,10px)}}
+.feature-visual .ring{animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(41,181,232,0)}50%{box-shadow:0 0 60px 0 rgba(41,181,232,.18)}}
+
+/* Testimonial quote mark */
+.t-slider::before{transition:transform .6s var(--ease)}
+.t-slider:hover::before{transform:translateY(-4px) rotate(-4deg)}
+
+/* WhatsApp attention ring */
+.whatsapp-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:ring 2.8s ease-out 2s infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(1.55);opacity:0}}
+.whatsapp-float{animation:cardIn .6s var(--ease) 1.6s both}
+
+/* Form success */
+.form-success.show{animation:cardIn .5s var(--ease) both}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.ha,.hero h1 .w>span,.hero-frame,.float-card,[data-stagger]>*,.whatsapp-float,.mode-icon{opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important}
+  .process::before{transform:none!important}
+  .scroll-progress{display:none}
+  html{scroll-behavior:auto}
+}
+
+/* ================= MOTION ================= */
+:root{--ease:cubic-bezier(.2,.7,.2,1)}
+
+/* Scroll progress */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:150;background:linear-gradient(90deg,var(--accent),var(--gold));transform-origin:0 50%;transform:scaleX(0)}
+
+/* Hero entrance */
+.anim-in{opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) forwards;animation-delay:var(--d,0s)}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .w > span{display:inline-block;transform:translateY(105%);animation:wordUp .9s var(--ease) forwards;animation-delay:var(--d,0s)}
+@keyframes wordUp{to{transform:none}}
+.hero h1 em{background:linear-gradient(100deg,var(--accent) 0%,#5B7CF0 40%,var(--gold) 55%,var(--accent) 75%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s ease-in-out infinite 1.6s}
+.hero h1 em .w > span{color:inherit}
+@keyframes sheen{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-frame{clip-path:inset(100% 0 0 0 round 24px);animation:unveil 1.2s var(--ease) .35s forwards}
+.hero-frame > img,.hero-frame > .visual-fallback{transform:scale(1.15);animation:settle 1.8s var(--ease) .35s forwards}
+@keyframes unveil{to{clip-path:inset(0 0 0 0 round 24px)}}
+@keyframes settle{to{transform:scale(1)}}
+.hero-visual .float-card{opacity:0;animation:cardIn .8s var(--ease) forwards,float 6s ease-in-out infinite}
+.fc-1{animation-delay:1.1s,1.9s!important}
+.fc-2{animation-delay:1.3s,2.4s!important}
+@keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+.parallax-layer{transition:transform .25s ease-out;will-change:transform}
+
+/* Buttons: sheen + press */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn-primary::after,.btn-light::after,.btn-dark::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn-primary:hover::after,.btn-light:hover::after,.btn-dark:hover::after{transform:translateX(120%)}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* Tech marquee */
+.marquee{background:var(--ink-2);border-top:1px solid var(--line-dark);overflow:hidden;padding:18px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{display:inline-flex;align-items:center;gap:28px;padding-right:28px;font-size:.92rem;font-weight:500;color:var(--muted-light);letter-spacing:.02em;white-space:nowrap}
+.marquee-track span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* Reveal variants & stagger */
+.reveal.from-left{transform:translateX(-28px)}
+.reveal.from-right{transform:translateX(28px)}
+.reveal.zoom{transform:scale(.96)}
+.reveal.in.from-left,.reveal.in.from-right,.reveal.in.zoom{transform:none}
+/* Premium grid cascade: cards rise, un-blur and settle on a diagonal wave; icons pop in after */
+.js .modes-grid[data-stagger] > *,.js .domain-grid[data-stagger] > *{opacity:0;filter:blur(10px);transform:translateY(46px) scale(.93);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16,1,.3,1),filter .8s ease-out,background .25s,border-color .2s,box-shadow .2s}
+.js .modes-grid[data-stagger].in > *,.js .domain-grid[data-stagger].in > *{opacity:1;filter:none;transform:none}
+.js .modes-grid[data-stagger] .mode-icon{transform:scale(.4) rotate(-25deg);opacity:0;transition:transform .8s cubic-bezier(.34,1.56,.64,1) .35s,opacity .5s ease .35s,background .25s,color .25s,border-color .25s}
+.js .modes-grid[data-stagger].in .mode-icon{transform:none;opacity:1}
+.js .modes-grid[data-stagger].in .mode-card:hover .mode-icon{transform:scale(1.08)}
+/* 3D swing-in reveal: tilt up from the floor; side columns sweep in from their edge */
+.js .reveal{opacity:0;transform-origin:50% 100%;transform:perspective(1000px) translate3d(var(--tx,0),70px,0) rotateX(18deg) rotateY(var(--ry,0deg)) scale(.94);clip-path:inset(0 0 12% 0 round 18px);transition:opacity .8s ease-out,transform 1.1s cubic-bezier(.16,1,.3,1),clip-path 1.1s cubic-bezier(.16,1,.3,1)}
+.js .reveal.in,.js .reveal.in.from-left,.js .reveal.in.from-right,.js .reveal.in.zoom{opacity:1;transform:perspective(1000px) translate3d(0,0,0) rotateX(0) rotateY(0) scale(1);clip-path:inset(0 0 0 0 round 18px)}
+.stagger > *{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease),background .25s,box-shadow .25s,border-color .25s}
+.stagger.in > *{opacity:1;transform:none}
+.eyebrow::before{transform-origin:left;transition:transform .8s var(--ease) .2s}
+.reveal:not(.in) .eyebrow::before,.reveal:not(.in) .eyebrow::after{transform:scaleX(0)}
+.stats-band .stat-item{opacity:0;transform:translateY(12px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.stats-band.in .stat-item{opacity:1;transform:none}
+
+/* Why cards: accent line + icon motion */
+.why-card{position:relative;overflow:hidden}
+.why-card::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--accent),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.why-card:hover::before{transform:scaleX(1)}
+.why-icon{transition:transform .4s var(--ease),background .3s,color .3s}
+.why-card:hover .why-icon{transform:rotate(-8deg) scale(1.08);background:var(--accent);color:#fff}
+.mode-icon svg,.step-num{transition:transform .4s var(--ease),background .25s,color .25s,border-color .25s}
+.mode-card:hover .mode-icon svg{transform:scale(1.12)}
+
+/* Feature spotlight */
+.feature::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.07),transparent 60%)}
+.feature:hover::before{opacity:1}
+.feature-visual .ring{animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(41,181,232,0)}50%{box-shadow:0 0 0 18px rgba(41,181,232,.06)}}
+
+/* Process: line draws, steps pop in sequence */
+.process::before{transform:scaleX(0);transform-origin:left;transition:transform 1.6s var(--ease) .2s}
+.process.in::before{transform:scaleX(1)}
+.process .step{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.process.in .step{opacity:1;transform:none}
+.process.in .step .step-num{animation:ping .6s var(--ease) both;animation-delay:inherit}
+.step:hover .step-num{transform:translateY(-3px)}
+@keyframes ping{0%{transform:scale(.6)}70%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+/* CTA drifting glow */
+.cta-banner::before{animation:drift 14s ease-in-out infinite alternate;background-size:140% 140%}
+@keyframes drift{from{background-position:0% 0%}to{background-position:100% 100%}}
+
+/* WhatsApp pulse */
+.whatsapp-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;z-index:-1;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.7);opacity:0}}
+
+/* Form focus label */
+.form-group label{transition:color .2s}
+.form-group:focus-within label{color:var(--accent)}
+.form-success.show{animation:rise .5s var(--ease) both}
+
+@media (prefers-reduced-motion:reduce){
+  .anim-in,.hero h1 .w > span,.hero-visual .float-card,.stagger > *,.stats-band .stat-item,.process .step{opacity:1!important;transform:none!important}
+  .hero-frame{clip-path:none}
+  .hero-frame > img{transform:none}
+  .process::before,.eyebrow::before,.eyebrow::after{transform:none!important}
+  .scroll-progress{display:none}
+}
+
+/* Responsive */
+@media (min-width:1025px) and (max-width:1280px){
+  .nav-wrap{gap:12px}
+  .brand{font-size:1rem}
+  .main-nav{gap:0}
+  .main-nav a{padding:8px 8px;font-size:.84rem}
+  .nav-actions{gap:8px}
+  .nav-actions .btn{padding:9px 13px;font-size:.84rem}
+}
+@media (max-width:1024px){
+  .main-nav{display:none}
+  .hamburger{display:inline-flex}
+}
+@media (max-width:1140px){
+  .footer-grid{grid-template-columns:1fr 1fr 1fr}
+  .footer-map{grid-column:span 2}
+}
+@media (max-width:980px){
+  .section{padding:88px 0}
+  .hero-inner{grid-template-columns:1fr;gap:56px}
+  .hero-visual{max-width:560px;margin:0 auto;width:100%}
+  .fc-1{left:-12px}.fc-2{right:-8px}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
+  .stat-item:nth-child(3){border-right:0}
+  .stat-item:nth-child(n+4){border-top:1px solid var(--line-dark)}
+  .feature{grid-template-columns:1fr}
+  .feature-visual{border-left:0;border-top:1px solid var(--line-dark);padding:48px 0}
+  .why-grid,.domain-grid{grid-template-columns:repeat(2,1fr)}
+  .modes-grid{grid-template-columns:repeat(2,1fr)}
+  .process{grid-template-columns:repeat(3,1fr);row-gap:40px}
+  .process::before{display:none}
+  .t-wrap,.demo-layout{grid-template-columns:1fr;gap:48px}
+  .cta-banner{flex-direction:column;align-items:flex-start;padding:56px 40px}
+  .head-row{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:640px){
+  .container,.nav-wrap{padding:0 16px}
+  .section{padding:72px 0}
+  .nav-wrap{height:68px}
+  .mobile-nav{inset:68px 0 0 0}
+  .nav-wrap > .nav-actions .btn{display:none}
+  .hero{padding:48px 0 72px}
+  .hero-cta-row .btn{flex:1 1 100%}
+  .hero-trust div{padding-right:18px;margin-right:18px}
+  .hero-trust b{font-size:1.35rem}
+  .float-card{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item{padding:28px 12px;border-right:1px solid var(--line-dark)!important;border-top:1px solid var(--line-dark)}
+  .stat-item:nth-child(-n+2){border-top:0}
+  .stat-item:nth-child(2n){border-right:0!important}
+  .stat-item:last-child{grid-column:span 2;border-right:0!important}
+  .stat-number{font-size:1.7rem}
+  .feature{border-radius:22px}
+  .feature-body{padding:40px 24px}
+  .topic-list{grid-template-columns:1fr 1fr}
+  .why-grid,.domain-grid,.modes-grid{grid-template-columns:1fr}
+  .process{grid-template-columns:repeat(2,1fr)}
+  .t-slider{padding:32px 24px}
+  .t-quote{font-size:1.2rem}
+  .t-track{min-height:280px}
+  .cta-banner{padding:44px 24px;border-radius:22px;margin-bottom:72px}
+  .form-card{padding:28px 20px}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-map{grid-column:auto}
+  .footer-bottom{padding-bottom:96px}
+  .whatsapp-float{display:none}
+  .mobile-sticky-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:95;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+  .msb-inner{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px}
+  .msb-inner a{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 8px;border-radius:12px;font-weight:600;font-size:.88rem}
+  .msb-inner svg{width:17px;height:17px}
+  .msb-whatsapp{background:#E8F9EF;color:#128C4A}
+  .msb-call{background:var(--sand);color:var(--ink)}
+  .msb-demo{background:var(--accent);color:#fff}
+}
+</style>
+<link rel="stylesheet" href="css/nav-dropdown.css?v=2">
+<link rel="stylesheet" href="css/cursor.css?v=6">
+<link rel="stylesheet" href="css/footer-glass.css?v=10">
+<link rel="stylesheet" href="css/cta-fx.css?v=4">
+<link rel="stylesheet" href="css/tech-tree.css?v=10">
+</head>
+<body>
+<script>
+  function imgFallback(imgEl, label) {
+    var wrap = document.createElement("div");
+    wrap.className = "visual-fallback";
+    wrap.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">' +
+      '<rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path><path d="M7 9l3 2-3 2M12 13h4"></path>' +
+      "</svg><span>" + label + "</span>";
+    imgEl.replaceWith(wrap);
+  }
+</script>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="NDR EdTech home">
+      <img src="assets/logo/ndr-edtech-logo.png" alt="NDR EdTech logo" onerror="this.parentNode.classList.add('no-logo');this.remove()">
+      <span class="brand-mark" aria-hidden="true">NDR</span>
+      <span>NDR EdTech</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-dd"><a href="courses.html">Courses</a><button class="nav-dd-toggle" type="button" aria-label="Show course list" aria-haspopup="true" aria-expanded="false"><svg class="nav-dd-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="nav-dd-panel" role="menu"><div class="nav-dd-cols"><div class="nav-dd-cat"><h4>Data Engineering</h4><ul><li><a href="course-details.html?course=snowflake">Snowflake</a></li><li><a href="course-details.html?course=azure-data-factory">Azure Data Factory</a></li><li><a href="course-details.html?course=informatica">Informatica</a></li><li><a href="course-details.html?course=informatica-cloud">Informatica Cloud</a></li></ul></div><div class="nav-dd-cat"><h4>Cloud &amp; DevOps</h4><ul><li><a href="course-details.html?course=aws-devops">AWS DevOps</a></li><li><a href="course-details.html?course=azure-devops">Azure DevOps</a></li><li><a href="course-details.html?course=google-cloud-platform">Google Cloud Platform</a></li><li><a href="course-details.html?course=vmware">VMware</a></li><li><a href="course-details.html?course=kubernetes">Kubernetes</a></li><li><a href="course-details.html?course=linux-administration">Linux Administration</a></li><li><a href="course-details.html?course=docker">Docker</a></li></ul></div><div class="nav-dd-cat"><h4>Programming</h4><ul><li><a href="course-details.html?course=java">Java</a></li><li><a href="course-details.html?course=python">Python</a></li><li><a href="course-details.html?course=mulesoft">MuleSoft</a></li><li><a href="course-details.html?course=dotnet">.NET</a></li></ul></div><div class="nav-dd-cat"><h4>Testing</h4><ul><li><a href="course-details.html?course=tosca">Tosca</a></li><li><a href="course-details.html?course=selenium">Selenium</a></li><li><a href="course-details.html?course=etl-testing">ETL Testing</a></li><li><a href="course-details.html?course=manual-testing">Manual Testing</a></li></ul></div><div class="nav-dd-cat"><h4>Data &amp; BI</h4><ul><li><a href="course-details.html?course=tableau-administration">Tableau Administration</a></li><li><a href="course-details.html?course=power-bi">Power BI</a></li><li><a href="course-details.html?course=data-science">Data Science</a></li><li><a href="course-details.html?course=data-science-ai-ml">Data Science with AI &amp; ML</a></li><li><a href="course-details.html?course=looker-bi">Looker BI</a></li></ul></div><div class="nav-dd-cat"><h4>Database</h4><ul><li><a href="course-details.html?course=sql-pl-sql">SQL / PL SQL</a></li><li><a href="course-details.html?course=oracle-dba">Oracle DBA</a></li></ul></div><div class="nav-dd-cat"><h4>Cyber Security</h4><ul><li><a href="course-details.html?course=cyber-security">Cyber Security</a></li><li><a href="course-details.html?course=cyberark">CyberArk</a></li></ul></div><div class="nav-dd-cat"><h4>Business</h4><ul><li><a href="course-details.html?course=jira-administration">JIRA Administration</a></li><li><a href="course-details.html?course=servicenow-administration">ServiceNow Administration</a></li><li><a href="course-details.html?course=digital-marketing">Digital Marketing</a></li><li><a href="course-details.html?course=salesforce">Salesforce</a></li><li><a href="course-details.html?course=pega-prpc">Pega PRPC</a></li><li><a href="course-details.html?course=business-analyst">Business Analyst</a></li><li><a href="course-details.html?course=mis-executive">MIS Executive</a></li><li><a href="course-details.html?course=investment-banking-nism">Investment Banking / NISM</a></li><li><a href="course-details.html?course=change-management">Change Management</a></li></ul></div><div class="nav-dd-cat"><h4>ERP</h4><ul><li><a href="course-details.html?course=oracle-fusion">Oracle Fusion</a></li></ul></div></div><a class="nav-dd-all" href="courses.html">View all 38 courses &rarr;</a></div></div>
+      <a href="corporate-training.html">Training</a>
+      <a href="projects.html">Projects</a>
+      <a href="career-support.html">Career Support</a>
+      <a href="faq.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="demo.html">Book Free Demo</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="courses.html">Courses</a>
+  <a href="corporate-training.html">Training</a>
+  <a href="projects.html">Projects</a>
+  <a href="career-support.html">Career Support</a>
+  <a href="faq.html">Resources</a>
+  <a href="contact.html">Contact</a>
+  <div class="nav-actions">
+    <a class="btn btn-outline" href="demo.html">Watch Demo</a>
+    <a class="btn btn-primary" href="demo.html">Book Free Demo</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="scroll-progress" aria-hidden="true"></div>
+        <span class="hero-eyebrow ha" style="--d:.05s"><span class="dot"></span> Learn. Build. Get Career Ready.</span>
+        <h1>Turn Technology Skills Into <em>Career Opportunities.</em></h1>
+        <p class="hero-sub ha" style="--d:.75s">Master in-demand IT technologies through expert-led training, hands-on projects, real-world use cases and career-focused support.</p>
+        <div class="hero-cta-row ha" style="--d:.9s">
+          <a class="btn btn-primary" href="courses.html">Explore Courses
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-outline" href="demo.html">Watch Free Demo</a>
+        </div>
+        <a class="hero-link ha" style="--d:1.0s" href="contact.html">Talk to a Career Counsellor
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="hero-trust ha" style="--d:1.1s" data-stagger>
+          <div><b>12+</b><span>Years Experience</span></div>
+          <div><b>30+</b><span>IT Courses</span></div>
+          <div><b>Hands-On</b><span>Learning</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame tt-frame">
+          <div class="tt-copy">
+            <p class="tt-kicker">Learn Today. Lead Tomorrow.</p>
+            <h2 class="tt-title">Master in-demand technology through practical training, real-world projects and expert-led learning.</h2>
+          </div>
+          <div id="techTree"></div>
+          <p class="tt-sub">Career-Ready Training</p>
+        </div>
+        <div class="float-card fc-1" aria-hidden="true">
+          <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4 3 12l5 8M16 4l5 8-5 8"/></svg></div>
+          <div><strong>Real-Time Projects</strong><span>Portfolio-ready experience</span></div>
+        </div>
+        <div class="float-card fc-2" aria-hidden="true">
+          <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+          <div><strong>Career Support</strong><span>Resume to placement</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-band" aria-label="Why learners trust NDR EdTech">
+    <div class="container stats-grid" data-stagger>
+      <div class="stat-item"><div class="stat-number"><span data-counter="12" data-suffix="+">12+</span></div><div class="stat-label">Years Industry Experience</div></div>
+      <div class="stat-item"><div class="stat-number"><span data-counter="30" data-suffix="+">30+</span></div><div class="stat-label">IT Courses</div></div>
+      <div class="stat-item"><div class="stat-number">Hands-On</div><div class="stat-label">Learning</div></div>
+      <div class="stat-item"><div class="stat-number">Real-Time</div><div class="stat-label">Projects</div></div>
+      <div class="stat-item"><div class="stat-number">Career</div><div class="stat-label">Support</div></div>
+    </div>
+  </section>
+
+  <!-- SNOWFLAKE FEATURE -->
+  <section class="section">
+    <div class="container">
+      <div class="feature">
+        <div class="feature-body">
+          <span class="eyebrow">Featured Program</span>
+          <h2>Master Snowflake &amp; Modern Data Engineering</h2>
+          <p class="lead">Go deep into cloud data warehousing — from architecture and SQL to Snowpipe, performance tuning and real-time data engineering projects.</p>
+          <ul class="topic-list" data-stagger>
+            <li>Snowflake Architecture</li>
+            <li>Virtual Warehouses</li>
+            <li>Snowpipe</li>
+            <li>Time Travel</li>
+            <li>Zero-Copy Cloning</li>
+            <li>Streams &amp; Tasks</li>
+            <li>RBAC &amp; Security</li>
+            <li>Query Tuning</li>
+            <li>Data Sharing</li>
+          </ul>
+          <div class="feature-cta">
+            <a class="btn btn-light" href="course-details.html?course=snowflake">Watch Snowflake Demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-ghost-light" href="#demoForm">Request a Callback</a>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="ring">
+          <ul class="orbit">
+            <li style="--a:0deg"><span role="button" tabindex="0" data-topic="Snowflake Architecture" title="Snowflake Architecture" aria-label="Snowflake Architecture - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 12.5l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></span></li>
+            <li style="--a:40deg"><span role="button" tabindex="0" data-topic="Virtual Warehouses" title="Virtual Warehouses" aria-label="Virtual Warehouses - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"/></svg></span></li>
+            <li style="--a:80deg"><span role="button" tabindex="0" data-topic="Snowpipe" title="Snowpipe" aria-label="Snowpipe - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h12a3 3 0 013 3v0a3 3 0 003 3"/><path d="M3 15h6"/><path d="M18 18l3-3-3-3"/><path d="M12 3v3M9 4l3 2 3-2"/></svg></span></li>
+            <li style="--a:120deg"><span role="button" tabindex="0" data-topic="Time Travel" title="Time Travel" aria-label="Time Travel - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9 9 0 00-6.5 2.8L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg></span></li>
+            <li style="--a:160deg"><span role="button" tabindex="0" data-topic="Zero-Copy Cloning" title="Zero-Copy Cloning" aria-label="Zero-Copy Cloning - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 00-2-2H5a2 2 0 00-2 2v9a2 2 0 002 2h3"/></svg></span></li>
+            <li style="--a:200deg"><span role="button" tabindex="0" data-topic="Streams & Tasks" title="Streams & Tasks" aria-label="Streams & Tasks - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c3-3 5 3 9 0s6 3 9 0"/><path d="M3 14c3-3 5 3 9 0s6 3 9 0"/><path d="M8 20l2.5 2L16 18" transform="translate(0 -2)"/></svg></span></li>
+            <li style="--a:240deg"><span role="button" tabindex="0" data-topic="RBAC & Security" title="RBAC & Security" aria-label="RBAC & Security - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span></li>
+            <li style="--a:280deg"><span role="button" tabindex="0" data-topic="Query Tuning" title="Query Tuning" aria-label="Query Tuning - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M4 12h4M12 12h8"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/><circle cx="10" cy="12" r="2"/></svg></span></li>
+            <li style="--a:320deg"><span role="button" tabindex="0" data-topic="Data Sharing" title="Data Sharing" aria-label="Data Sharing - click to read more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4"/></svg></span></li>
+          </ul>
+            <img src="assets/logo/Snowflake-logo.png" alt="" onerror="this.outerHTML='<svg class=&quot;snow-fallback&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot;><path d=&quot;M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2 3-2M9 20l3-2 3 2M4 10.5l2.6-.2L5.5 7.5M20 13.5l-2.6.2 1.1 2.8M4 13.5l2.6.2-1.1 2.8M20 10.5l-2.6-.2 1.1-2.8&quot;/></svg>'">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section-sand">
+    <div class="container">
+      <div class="head-row">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why NDR EdTech</span>
+          <h2>Why Choose NDR EdTech?</h2>
+          <p>Industry-focused IT training built around practice, projects and real career outcomes.</p>
+        </div>
+        <a class="btn btn-outline reveal" href="about.html">About Us</a>
+      </div>
+      <div class="why-grid">
+        <button type="button" class="why-card reveal" data-why-card>
+          <div class="why-top">
+            <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg></div>
+            <span class="why-index">01</span>
+          </div>
+          <h3>Industry Experienced Trainers</h3>
+          <p>Learn from trainers with real, hands-on industry background in their technology domain.</p>
+          <span class="why-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <ul class="why-points" hidden>
+            <li>Trainers with 8+ years of real industry experience</li>
+            <li>Active practitioners, not just full-time teachers</li>
+            <li>Deep expertise in their specific technology domain</li>
+            <li>Real project stories and practical insights in every session</li>
+          </ul>
+        </button>
+        <button type="button" class="why-card reveal" data-why-card>
+          <div class="why-top">
+            <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="10" rx="1"/><path d="M2 19h20"/></svg></div>
+            <span class="why-index">02</span>
+          </div>
+          <h3>Hands-On Practical Training</h3>
+          <p>Every concept is reinforced with guided, hands-on practice — not just slides and theory.</p>
+          <span class="why-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <ul class="why-points" hidden>
+            <li>Guided hands-on labs after every concept</li>
+            <li>Practice environments set up for real tool usage</li>
+            <li>Step-by-step exercises, not just theory slides</li>
+            <li>Doubt-clearing sessions built into every module</li>
+          </ul>
+        </button>
+        <button type="button" class="why-card reveal" data-why-card>
+          <div class="why-top">
+            <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4 3 12l5 8M16 4l5 8-5 8"/></svg></div>
+            <span class="why-index">03</span>
+          </div>
+          <h3>Real-Time Projects</h3>
+          <p>Apply what you learn to real-world scenario projects that mirror actual job requirements.</p>
+          <span class="why-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <ul class="why-points" hidden>
+            <li>Scenario-based projects mirroring actual job tasks</li>
+            <li>Work on end-to-end real-world use cases</li>
+            <li>Portfolio-ready project experience</li>
+            <li>Exposure to industry-standard tools and workflows</li>
+          </ul>
+        </button>
+        <button type="button" class="why-card reveal" data-why-card>
+          <div class="why-top">
+            <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+            <span class="why-index">04</span>
+          </div>
+          <h3>Interview Preparation</h3>
+          <p>Curated question banks, mock interviews and structured feedback to build your confidence.</p>
+          <span class="why-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <ul class="why-points" hidden>
+            <li>Curated technical question banks by domain</li>
+            <li>Mock interviews with structured feedback</li>
+            <li>Resume and LinkedIn profile guidance</li>
+            <li>Confidence-building sessions before real interviews</li>
+          </ul>
+        </button>
+        <button type="button" class="why-card reveal" data-why-card>
+          <div class="why-top">
+            <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="8" r="2.3"/><path d="M15.2 13.2c2.4.3 4.8 2.1 4.8 5.8"/></svg></div>
+            <span class="why-index">05</span>
+          </div>
+          <h3>Career Guidance</h3>
+          <p>One-on-one guidance to help you choose the right technology path for your goals.</p>
+          <span class="why-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <ul class="why-points" hidden>
+            <li>One-on-one career counselling sessions</li>
+            <li>Help choosing the right technology path</li>
+            <li>Guidance on certifications that matter</li>
+            <li>Ongoing support even after course completion</li>
+          </ul>
+        </button>
+        <button type="button" class="why-card reveal" data-why-card>
+          <div class="why-top">
+            <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div>
+            <span class="why-index">06</span>
+          </div>
+          <h3>Flexible Learning Modes</h3>
+          <p>Online, classroom, weekend or self-paced — choose what fits your schedule.</p>
+          <span class="why-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <ul class="why-points" hidden>
+            <li>Live online classes</li>
+            <li>In-person classroom training</li>
+            <li>Weekend batches for working professionals</li>
+            <li>Self-paced recorded content option</li>
+          </ul>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="why-modal" id="whyModal" aria-hidden="true">
+    <div class="why-modal-backdrop" data-why-close></div>
+    <div class="why-modal-panel" role="dialog" aria-modal="true" aria-labelledby="whyModalTitle">
+      <button type="button" class="why-modal-close" data-why-close aria-label="Close">&times;</button>
+      <div class="why-icon" id="whyModalIcon"></div>
+      <h3 id="whyModalTitle"></h3>
+      <ul class="why-modal-points" id="whyModalPoints"></ul>
+    </div>
+  </div>
+
+  <!-- TRAINING MODES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Training Modes</span>
+        <h2>Learn The Way That Works For You</h2>
+        <p>Six flexible formats designed around students, working professionals and organizations.</p>
+      </div>
+      <div class="modes-grid" data-stagger>
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg></div>
+          <h3>Online Training <span class="mode-tag">Popular</span></h3>
+          <p>Learn from anywhere with instructor-led live sessions.</p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg></div>
+          <h3>Classroom Training</h3>
+          <p>Interactive classroom learning in Bengaluru.</p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></div>
+          <h3>Weekend Training</h3>
+          <p>Flexible training for working professionals.</p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Corporate Training</h3>
+          <p>Customized training programs for organizations.</p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 4 3 12l5 8M16 4l5 8-5 8"/></svg></div>
+          <h3>Project Training</h3>
+          <p>Focused, project-only training to strengthen your portfolio.</p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
+          <h3>Self-Paced Training</h3>
+          <p>Structured recorded content you can learn on your own schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-sand">
+    <div class="container">
+      <div class="head-row">
+        <div class="section-head reveal">
+          <span class="eyebrow">Project-Based Learning</span>
+          <h2>Don't Just Learn. Build.</h2>
+          <p>Gain practical experience through assignments, real-world scenarios and project-based learning.</p>
+        </div>
+        <a class="btn btn-dark reveal" href="projects.html">Explore Projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="domain-grid" data-stagger>
+        <a class="domain" href="projects.html?area=data-engineering"><span class="num">01</span><span class="d-label">Data Engineering</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse pathLength="1" cx="12" cy="6" rx="8" ry="3"/><path pathLength="1" d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path pathLength="1" d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=cloud-migration"><span class="num">02</span><span class="d-label">Cloud Migration</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M7 18a4 4 0 01-.5-7.97A5.5 5.5 0 0117 8.5 4.5 4.5 0 0117.5 18H7z"/><path pathLength="1" d="M12 16v-5M9.5 13l2.5-2.5 2.5 2.5"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=etl-pipelines"><span class="num">03</span><span class="d-label">ETL Pipelines</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M3 7h10a3 3 0 013 3v0a3 3 0 003 3h2"/><path pathLength="1" d="M3 17h6"/><path pathLength="1" d="M18 10l3 3-3 3"/><circle pathLength="1" cx="4" cy="7" r="1"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=data-warehousing"><span class="num">04</span><span class="d-label">Data Warehousing</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M3 10l9-6 9 6v10H3V10z"/><path pathLength="1" d="M8 20v-6h8v6M8 17h8"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=devops-automation"><span class="num">05</span><span class="d-label">DevOps Automation</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 12c-2-3-3.5-4-5.5-4a4 4 0 000 8c2 0 3.5-1 5.5-4zm0 0c2 3 3.5 4 5.5 4a4 4 0 000-8c-2 0-3.5 1-5.5 4z"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=software-development"><span class="num">06</span><span class="d-label">Software Development</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=testing-automation"><span class="num">07</span><span class="d-label">Testing Automation</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M9 3h6M10 3v6l-5 9a2 2 0 001.8 3h10.4a2 2 0 001.8-3l-5-9V3"/><path pathLength="1" d="M8 15h8"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=business-intelligence"><span class="num">08</span><span class="d-label">Business Intelligence</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="domain" href="projects.html?area=cyber-security"><span class="num">09</span><span class="d-label">Cyber Security</span><svg class="d-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path pathLength="1" d="M9 12l2 2 4-4"/></svg><svg class="d-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER SUPPORT -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Career Support</span>
+        <h2>Training Doesn't End With the Course.</h2>
+        <p>A structured six-step path from skill assessment to placement assistance.</p>
+      </div>
+      <div class="process" data-stagger>
+        <div class="step"><div class="step-num"><span class="sn-num">01</span><svg class="sn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="9"/><circle pathLength="1" cx="12" cy="12" r="5"/><circle pathLength="1" cx="12" cy="12" r="1.2"/><path pathLength="1" d="M12 3V1M21 12h2"/></svg></div><h3>Skill Assessment</h3></div>
+        <div class="step"><div class="step-num"><span class="sn-num">02</span><svg class="sn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5z"/><path pathLength="1" d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg></div><h3>Resume Building</h3></div>
+        <div class="step"><div class="step-num"><span class="sn-num">03</span><svg class="sn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M21 12a8 8 0 01-11.6 7.1L4 20l1.2-4.6A8 8 0 1121 12z"/><path pathLength="1" d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1-1.5 2M12 16.5h.01"/></svg></div><h3>Interview Preparation</h3></div>
+        <div class="step"><div class="step-num"><span class="sn-num">04</span><svg class="sn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect pathLength="1" x="3" y="6" width="13" height="12" rx="2"/><path pathLength="1" d="M16 10l5-3v10l-5-3"/></svg></div><h3>Mock Interviews</h3></div>
+        <div class="step"><div class="step-num"><span class="sn-num">05</span><svg class="sn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle pathLength="1" cx="12" cy="12" r="9"/><path pathLength="1" d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></div><h3>Career Guidance</h3></div>
+        <div class="step"><div class="step-num"><span class="sn-num">06</span><svg class="sn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect pathLength="1" x="3" y="7" width="18" height="13" rx="2"/><path pathLength="1" d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/><path pathLength="1" d="M9.5 16.5l1.5 1.5 3-3"/></svg></div><h3>Placement Assistance</h3></div>
+      </div>
+      <div class="center-cta">
+        <a class="btn btn-outline" href="career-support.html">See Full Career Support Process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-sand">
+    <div class="container t-wrap">
+      <div class="section-head reveal" style="margin-bottom:0">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What Learners Say</h2>
+        <p>Hear from students and working professionals who trained with NDR EdTech.</p>
+      </div>
+      <div class="t-slider reveal" id="tSlider">
+        <div class="t-track">
+          <div class="t-slide active">
+            <p class="t-quote">NDR EdTech made Snowflake click for me. The hands-on labs, clear explanations and real-time scenarios turned theory into practical skill I could use right away.</p>
+            <div class="t-person"><div class="avatar">R</div><div><strong>Rajeev</strong><span>Snowflake</span></div></div>
+          </div>
+          <div class="t-slide">
+            <p class="t-quote">What stood out was the practical approach. Building real Snowflake projects step by step gave me the confidence to work with data warehousing concepts, not just memorise them.</p>
+            <div class="t-person"><div class="avatar">T</div><div><strong>Tarun</strong><span>Snowflake</span></div></div>
+          </div>
+          <div class="t-slide">
+            <p class="t-quote">Learning Snowflake and Airflow together showed me how a complete data pipeline fits. Industry-focused training and personal mentoring made every concept easy to apply.</p>
+            <div class="t-person"><div class="avatar">D</div><div><strong>Devamaniraj</strong><span>Snowflake, Airflow</span></div></div>
+          </div>
+          <div class="t-slide">
+            <p class="t-quote">The Snowflake and dbt sessions were structured, project-driven and career-focused. I now understand modern data transformation workflows far better than before.</p>
+            <div class="t-person"><div class="avatar">P</div><div><strong>Prakash</strong><span>Snowflake and dbt</span></div></div>
+          </div>
+        </div>
+        <div class="t-controls">
+          <button class="t-arrow" data-dir="-1" aria-label="Previous testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button class="t-arrow" data-dir="1" aria-label="Next testimonial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="t-dots" role="tablist" aria-label="Choose testimonial"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div>
+          <h2>Experience The Training Before You Enroll.</h2>
+          <p>Attend a free demo session and understand our training methodology.</p>
+        </div>
+        <a class="btn btn-light" href="#demoForm">Book Free Demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="demo-layout">
+        <div class="demo-info reveal">
+          <span class="eyebrow">Free Demo Session</span>
+          <h2>Request Your Free Demo</h2>
+          <p>Share a few details and our career counsellor will reach out to schedule your free demo session.</p>
+          <ul class="demo-highlights" data-stagger>
+            <li>
+              <div class="h-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+              <div><strong>No Obligation</strong><span>Attend the demo and decide if it's the right fit.</span></div>
+            </li>
+            <li>
+              <div class="h-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4V5z"/></svg></div>
+              <div><strong>Meet the Trainer</strong><span>Get a feel for the teaching style and pace.</span></div>
+            </li>
+            <li>
+              <div class="h-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div>
+              <div><strong>Flexible Timing</strong><span>Demo slots available across online and classroom modes.</span></div>
+            </li>
+          </ul>
+          <div class="contact-quick">
+            <a href="tel:+918722355666"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>+91 87223 55666</a>
+            <a href="mailto:info@ndredtech.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@ndredtech.com</a>
+          </div>
+        </div>
+
+        <div class="form-card reveal" id="demoForm">
+          <h3>Book your free session</h3>
+          <p class="form-intro">We usually respond within one working day.</p>
+          <form data-validate novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="demoName">Full Name</label>
+                <input type="text" id="demoName" name="name" data-rule="name" placeholder="Your full name" autocomplete="name" required>
+                <span class="form-error">Please enter a valid name (min 2 characters).</span>
+              </div>
+              <div class="form-group">
+                <label for="demoPhone">Phone Number</label>
+                <input type="tel" id="demoPhone" name="phone" data-rule="phone" placeholder="10-digit mobile number" autocomplete="tel" required>
+                <span class="form-error">Please enter a valid 10-digit mobile number.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="demoEmail">Email</label>
+              <input type="email" id="demoEmail" name="email" data-rule="email" placeholder="you@example.com" autocomplete="email" required>
+              <span class="form-error">Please enter a valid email address.</span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="demoCourse">Course Interested In</label>
+                <select id="demoCourse" name="course" data-rule="required">
+                  <option value="">Select a course</option>
+                </select>
+                <span class="form-error">Please select a course.</span>
+              </div>
+              <div class="form-group">
+                <label for="demoMode">Training Mode</label>
+                <select id="demoMode" name="mode" data-rule="required">
+                  <option value="">Select mode</option>
+                  <option value="online">Online</option>
+                  <option value="classroom">Classroom</option>
+                  <option value="weekend">Weekend</option>
+                  <option value="corporate">Corporate</option>
+                </select>
+                <span class="form-error">Please select a training mode.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="demoMessage">Message <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <textarea id="demoMessage" name="message" placeholder="Tell us about your background and goals"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Request Free Demo</button>
+            <div class="form-success" role="status"><span aria-hidden="true">&#10003;</span> Thank you! Our career counsellor will contact you shortly.</div>
+            <p class="form-note">By submitting, you agree to be contacted by NDR EdTech regarding your enquiry.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="assets/logo/ndr-edtech-logo.png" alt="NDR EdTech logo" onerror="this.remove()">
+          <span>NDR EdTech</span>
+        </div>
+        <p>Industry-focused IT training for students and professionals.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/ndr_edtech" target="_blank" rel="noopener" aria-label="NDR EdTech on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://youtube.com/@NdrEdtech" target="_blank" rel="noopener" aria-label="NDR EdTech on YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l6 3-6 3V9z" fill="#fff" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="career-support.html">Career Support</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Courses</h4>
+        <ul>
+          <li><a href="course-details.html?course=snowflake">Snowflake</a></li>
+          <li><a href="course-details.html?course=python">Python</a></li>
+          <li><a href="course-details.html?course=java">Java</a></li>
+          <li><a href="course-details.html?course=azure-devops">Azure DevOps</a></li>
+          <li><a href="course-details.html?course=aws-devops">AWS DevOps</a></li>
+          <li><a href="course-details.html?course=power-bi">Power BI</a></li>
+          <li><a href="course-details.html?course=cyber-security">Cyber Security</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><a href="tel:+918722355666">+91 87223 55666</a></li>
+          <li><a href="tel:+918150978999">+91 81509 78999</a></li>
+          <li><a href="mailto:ndredtech@gmail.com">ndredtech@gmail.com</a></li>
+          <li><a href="mailto:info@ndredtech.com">info@ndredtech.com</a></li>
+          <li>#415, 8th Cross Rd, 8th Main, Sunshine Layout, BTM 2nd Stage, Bengaluru, Karnataka 560076, India</li>
+        </ul>
+      </div>
+      <div class="footer-col footer-map">
+        <h4>Find Us</h4>
+        <iframe src="https://www.google.com/maps?cid=8322578555926621887&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="NDR EdTech location map" allowfullscreen></iframe>
+        <a class="footer-map-link" href="https://maps.app.goo.gl/LKn871JTzhqkNUef9" target="_blank" rel="noopener">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> NDR EdTech. All Rights Reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" data-whatsapp-link href="https://wa.me/918722355666" aria-label="Chat with NDR EdTech on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 32 32" fill="#fff" width="30" height="30"><path d="M16 3C9 3 3.4 8.6 3.4 15.6c0 2.5.7 4.8 1.9 6.8L3 29l6.8-2.2c1.9 1 4.1 1.6 6.2 1.6 7 0 12.6-5.6 12.6-12.6C28.6 8.6 23 3 16 3zm0 2.8c5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8c-1.9 0-3.7-.5-5.2-1.5l-.4-.2-4 1.3 1.3-3.9-.2-.4c-1.1-1.6-1.7-3.5-1.7-5.5.1-5.4 4.5-9.4 9.9-9.4h.3zm5.4 12.5c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.6-.9-2.1-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<div class="mobile-sticky-bar">
+  <div class="msb-inner">
+    <a class="msb-whatsapp" data-whatsapp-link href="https://wa.me/918722355666" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>
+      WhatsApp
+    </a>
+    <a class="msb-call" href="tel:+918722355666">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>
+      Call
+    </a>
+    <a class="msb-demo" href="demo.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+      Free Demo
+    </a>
+  </div>
+</div>
+
+<!-- Uses your existing course list if js/courses.js is present -->
+<script src="js/courses.js?v=3" onerror="void 0"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* Course dropdown — uses `courses` from js/courses.js, else a fallback list */
+  var fallbackCourses = [
+    { id: "snowflake", name: "Snowflake" }, { id: "python", name: "Python" },
+    { id: "java", name: "Java" }, { id: "azure-devops", name: "Azure DevOps" },
+    { id: "aws-devops", name: "AWS DevOps" }, { id: "power-bi", name: "Power BI" },
+    { id: "cyber-security", name: "Cyber Security" }
+  ];
+  var list = (typeof courses !== "undefined" && Array.isArray(courses) && courses.length) ? courses : fallbackCourses;
+  var sel = document.getElementById("demoCourse");
+  list.forEach(function (c) {
+    var o = document.createElement("option");
+    o.value = c.id; o.textContent = c.name; sel.appendChild(o);
+  });
+  var qc = new URLSearchParams(location.search).get("course");
+  if (qc) sel.value = qc;
+
+  /* Year */
+  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+  /* Header shadow */
+  var header = document.getElementById("siteHeader");
+  function onScroll() { header.classList.toggle("scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  /* Mobile nav */
+  var burger = document.querySelector(".hamburger");
+  var mnav = document.getElementById("mobileNav");
+  function setNav(open) {
+    burger.setAttribute("aria-expanded", open);
+    mnav.classList.toggle("open", open);
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  burger.addEventListener("click", function () { setNav(burger.getAttribute("aria-expanded") !== "true"); });
+  mnav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setNav(false); }); });
+  window.addEventListener("resize", function () { if (window.innerWidth > 1280) setNav(false); });
+
+
+  /* Counters */
+  var counters = document.querySelectorAll("[data-counter]");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && !reduce) {
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target, end = +el.dataset.counter, suf = el.dataset.suffix || "", t0 = null;
+        function tick(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min((ts - t0) / 1400, 1), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          el.textContent = v + suf;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick); co.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (c) { c.textContent = "0" + (c.dataset.suffix || ""); co.observe(c); });
+  }
+
+
+  /* ===== Motion ===== */
+  /* Headline word-by-word reveal */
+  var h1 = document.querySelector(".hero h1");
+  if (h1 && !reduce) {
+    var wi = 0;
+    var wrapWords = function (node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function (part) {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
+            var w = document.createElement("span"); w.className = "w";
+            var inner = document.createElement("span");
+            inner.textContent = part;
+            inner.style.animationDelay = (0.2 + wi++ * 0.07) + "s";
+            w.appendChild(inner); frag.appendChild(w);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) { wrapWords(n); }
+      });
+    };
+    h1.setAttribute("aria-label", h1.textContent.replace(/\s+/g, " ").trim());
+    wrapWords(h1);
+    h1.classList.add("h1-words");
+    h1.querySelectorAll(".w").forEach(function (w) { w.setAttribute("aria-hidden", "true"); });
+    /* one continuous cyan→blue→purple gradient across the headline: each word paints its slice of it */
+    var paintH1 = function () {
+      var hb = h1.getBoundingClientRect();
+      h1.querySelectorAll(".w > span").forEach(function (sp) {
+        sp.style.backgroundSize = hb.width + "px 100%";
+        sp.style.backgroundPosition = (-(sp.getBoundingClientRect().left - hb.left)) + "px 0";
+      });
+    };
+    paintH1();
+    window.addEventListener("resize", paintH1);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(paintH1);
+    setTimeout(paintH1, 1500);
+  }
+
+  /* Scroll progress bar */
+  var bar = document.querySelector(".scroll-progress");
+  if (bar) {
+    document.body.appendChild(bar);
+    var ticking = false;
+    var setBar = function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = "scaleX(" + (max > 0 ? window.scrollY / max : 0) + ")";
+      ticking = false;
+    };
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(setBar); } }, { passive: true });
+    setBar();
+  }
+
+  /* Reveal on scroll (plays once, forward only) */
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        el.classList.add("in"); io.unobserve(el);
+        /* hand transitions back to the component (hover effects) once revealed */
+        setTimeout(function () {
+          el.classList.remove("reveal");
+          el.style.transitionDelay = ""; el.style.removeProperty("--tx"); el.style.removeProperty("--ry");
+        }, 1500);
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+    reveals.forEach(function (el, i) {
+      var col = i % 3;
+      el.style.transitionDelay = col * 120 + "ms";
+      el.style.setProperty("--tx", ["-60px", "0px", "60px"][col]);
+      el.style.setProperty("--ry", ["12deg", "0deg", "-12deg"][col]);
+      io.observe(el);
+    });
+  } else { reveals.forEach(function (el) { el.classList.add("in"); }); }
+
+  /* Staggered groups (diagonal wave for card grids) */
+  var groups = document.querySelectorAll("[data-stagger]");
+  groups.forEach(function (g) {
+    var wave = g.classList.contains("modes-grid") || g.classList.contains("domain-grid");
+    Array.prototype.forEach.call(g.children, function (c, i) {
+      c.style.transitionDelay = wave ? (((i % 3) + Math.floor(i / 3)) * 0.12) + "s" : (i * 0.08) + "s";
+    });
+  });
+  if ("IntersectionObserver" in window) {
+    var go2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var g = e.target; g.classList.add("in"); go2.unobserve(g);
+        /* clear delays after entrance so hover effects respond instantly */
+        setTimeout(function () { Array.prototype.forEach.call(g.children, function (c) { c.style.transitionDelay = ""; }); }, 1600 + g.children.length * 120);
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    groups.forEach(function (g) { go2.observe(g); });
+  } else { groups.forEach(function (g) { g.classList.add("in"); }); }
+
+  /* Subtle hero parallax on pointer devices */
+  var hv = document.querySelector(".hero-visual");
+  var hero = document.querySelector(".hero");
+  if (hv && hero && !reduce && window.matchMedia("(pointer:fine)").matches) {
+    hero.addEventListener("mousemove", function (e) {
+      var r = hero.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+      hv.style.transform = "translate3d(" + (x * -14) + "px," + (y * -10) + "px,0)";
+    });
+    hero.addEventListener("mouseleave", function () { hv.style.transform = ""; });
+  }
+
+  /* Why modal */
+  var modal = document.getElementById("whyModal");
+  var mTitle = document.getElementById("whyModalTitle");
+  var mIcon = document.getElementById("whyModalIcon");
+  var mPts = document.getElementById("whyModalPoints");
+  var lastFocus = null;
+  function openModal(card) {
+    lastFocus = card;
+    mTitle.textContent = card.querySelector("h3").textContent;
+    mIcon.innerHTML = card.querySelector(".why-icon").innerHTML;
+    mPts.innerHTML = card.querySelector(".why-points").innerHTML;
+    modal.classList.add("open"); modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    modal.querySelector(".why-modal-close").focus();
+  }
+  function closeModal() {
+    modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll("[data-why-card]").forEach(function (c) { c.addEventListener("click", function () { openModal(c); }); });
+  modal.querySelectorAll("[data-why-close]").forEach(function (b) { b.addEventListener("click", closeModal); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { if (modal.classList.contains("open")) closeModal(); if (mnav.classList.contains("open")) setNav(false); }
+  });
+
+  /* Testimonials */
+  var slides = document.querySelectorAll(".t-slide");
+  var dotsWrap = document.querySelector(".t-dots");
+  var idx = 0, timer;
+  slides.forEach(function (_, i) {
+    var d = document.createElement("button");
+    d.setAttribute("aria-label", "Testimonial " + (i + 1));
+    d.addEventListener("click", function () { go(i); restart(); });
+    dotsWrap.appendChild(d);
+  });
+  var dots = dotsWrap.querySelectorAll("button");
+  function go(i) {
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function (s, j) { s.classList.toggle("active", j === idx); });
+    dots.forEach(function (d, j) { d.classList.toggle("active", j === idx); });
+  }
+  function restart() { clearInterval(timer); if (!reduce) timer = setInterval(function () { go(idx + 1); }, 6000); }
+  document.querySelectorAll(".t-arrow").forEach(function (b) {
+    b.addEventListener("click", function () { go(idx + +b.dataset.dir); restart(); });
+  });
+  var slider = document.getElementById("tSlider");
+  slider.addEventListener("mouseenter", function () { clearInterval(timer); });
+  slider.addEventListener("mouseleave", restart);
+  go(0); restart();
+
+  /* Form validation */
+  var rules = {
+    name: function (v) { return v.trim().length >= 2; },
+    phone: function (v) { return /^[6-9]\d{9}$/.test(v.replace(/[\s-]/g, "").replace(/^(\+91|91|0)/, "")); },
+    email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); },
+    required: function (v) { return v.trim() !== ""; }
+  };
+  document.querySelectorAll("form[data-validate]").forEach(function (form) {
+    var fields = form.querySelectorAll("[data-rule]");
+    function check(f) {
+      var ok = rules[f.dataset.rule](f.value);
+      f.closest(".form-group").classList.toggle("invalid", !ok);
+      return ok;
+    }
+    fields.forEach(function (f) {
+      f.addEventListener("blur", function () { if (f.value) check(f); });
+      f.addEventListener("input", function () { if (f.closest(".form-group").classList.contains("invalid")) check(f); });
+      f.addEventListener("change", function () { check(f); });
+    });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var valid = true, first = null;
+      fields.forEach(function (f) { if (!check(f)) { valid = false; first = first || f; } });
+      if (!valid) { first.focus(); return; }
+      /* TODO: send form data to your backend / email service here */
+      form.querySelector(".form-success").classList.add("show");
+      form.reset();
+    });
+  });
+})();
+</script>
+<div class="topic-modal" id="topicModal" role="dialog" aria-modal="true" aria-labelledby="tmTitle">
+  <div class="tm-card">
+    <button class="tm-x" type="button" aria-label="Close">&times;</button>
+    <div class="tm-icon" id="tmIcon"></div>
+    <h3 id="tmTitle"></h3>
+    <p id="tmText"></p>
+    <ul id="tmList"></ul>
+    <a class="btn btn-primary" href="course-details.html?course=snowflake">See the Snowflake course</a>
+  </div>
+</div>
+<script>
+(function(){
+  var DATA={"Snowflake Architecture": ["Snowflake Architecture", "Snowflake is a cloud data platform built on three independent layers, so storage and compute scale separately.", ["Storage layer: data is stored compressed in columnar micro-partitions on cloud storage", "Compute layer: virtual warehouses run queries without competing for the same resources", "Cloud services layer: handles authentication, metadata, optimisation and transactions", "Runs on AWS, Azure and Google Cloud"]], "Virtual Warehouses": ["Virtual Warehouses", "A virtual warehouse is a cluster of compute resources that executes queries and loads data. It is separate from storage, so you can size it to the workload.", ["Sizes from X-Small to very large, resized in seconds", "Auto-suspend and auto-resume help control cost", "Multi-cluster warehouses handle many concurrent users", "Different teams can use separate warehouses on the same data"]], "Snowpipe": ["Snowpipe", "Snowpipe loads data continuously into Snowflake tables as soon as files arrive in a stage, instead of waiting for scheduled batch jobs.", ["Event-driven loading from cloud storage", "Serverless: no warehouse to manage", "Near real-time availability of new data", "Commonly paired with Streams and Tasks for pipelines"]], "Time Travel": ["Time Travel", "Time Travel lets you query, clone or restore data as it existed at an earlier point within a retention period.", ["Query past data using AT or BEFORE clauses", "Recover dropped tables, schemas and databases with UNDROP", "Undo accidental updates or deletes", "Retention period depends on your Snowflake edition and settings"]], "Zero-Copy Cloning": ["Zero-Copy Cloning", "Cloning creates an instant copy of a table, schema or database without duplicating the underlying data. The clone shares storage until changes are made.", ["Near-instant copies, even for large datasets", "Extra storage is used only for changed data", "Ideal for dev, test and QA environments", "Combine with Time Travel to clone data from a past point"]], "Streams & Tasks": ["Streams & Tasks", "Streams track changes (inserts, updates, deletes) on a table, and Tasks run SQL on a schedule or when a stream has new data. Together they build incremental pipelines.", ["Streams capture change data (CDC) on tables", "Tasks schedule SQL or stored procedures", "Tasks can be chained into dependency trees (DAGs)", "Process only new or changed rows to save compute"]], "RBAC & Security": ["RBAC & Security", "Snowflake controls access with role-based access control: privileges are granted to roles, and roles are granted to users.", ["Role hierarchy such as ACCOUNTADMIN, SYSADMIN and custom roles", "Encryption of data at rest and in transit", "Row access policies and dynamic data masking", "MFA, network policies and audit through access history"]], "Query Tuning": ["Query Tuning", "Query tuning is about getting results faster and cheaper by understanding how Snowflake executes your SQL.", ["Read the Query Profile to find bottlenecks", "Use clustering keys on very large tables where pruning is poor", "Select only needed columns and filter early", "Use result caching and right-size the warehouse"]], "Data Sharing": ["Data Sharing", "Secure Data Sharing lets you share live data with other Snowflake accounts without copying or moving it.", ["Consumers query the data in place, always up to date", "No ETL or file transfers needed", "Provider controls exactly what is shared and can revoke it", "Works with the Snowflake Marketplace and reader accounts"]]};
+  var modal=document.getElementById("topicModal"); if(!modal) return;
+  var last=null;
+  function open(btn){
+    var d=DATA[btn.getAttribute("data-topic")]; if(!d) return;
+    last=btn;
+    document.getElementById("tmTitle").textContent=d[0];
+    document.getElementById("tmText").textContent=d[1];
+    var ul=document.getElementById("tmList"); ul.innerHTML="";
+    d[2].forEach(function(x){var li=document.createElement("li");li.textContent=x;ul.appendChild(li)});
+    document.getElementById("tmIcon").innerHTML=btn.querySelector("svg").outerHTML;
+    modal.classList.add("open"); document.body.style.overflow="hidden";
+    modal.querySelector(".tm-x").focus();
+  }
+  function close(){modal.classList.remove("open"); document.body.style.overflow=""; if(last) last.focus();}
+  document.querySelectorAll(".orbit span[data-topic]").forEach(function(b){
+    b.addEventListener("click",function(){open(b)});
+    b.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open(b)}});
+  });
+  modal.addEventListener("click",function(e){if(e.target===modal||e.target.closest(".tm-x")) close()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.classList.contains("open")) close()});
+})();
+</script>
+<script src="js/nav-dropdown.js?v=2"></script>
+<script src="js/footer-water.js?v=4" defer></script>
+<script src="js/cta-fx.js?v=2" defer></script>
+<script src="js/tech-tree.js?v=6" defer></script>
+</body>
+</html>

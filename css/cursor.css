@@ -1,0 +1,16 @@
+/* NDR EdTech cursor: "AI pointer" - gradient arrow with a spark. Pure CSS, sharp, zero lag.
+   Default: blue to violet arrow + cyan spark.  Over clickable things: cyan to violet arrow + brighter double spark. */
+
+html {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231677FF'/%3E%3Cstop offset='1' stop-color='%237C5CFC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M6 4v20.5l5.4-4.9 3.7 8.1 3.6-1.7-3.7-7.9h7.6L6 4z' fill='url(%23g)' stroke='white' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M27 3Q27 8 32 8Q27 8 27 13Q27 8 22 8Q27 8 27 3Z' fill='%2321B8E6' stroke='white' stroke-width='1' stroke-linejoin='round'/%3E%3C/svg%3E") 6 4, auto;
+}
+
+a, button, [role="button"], summary, label, select,
+.btn, .filter-btn, .faq-question, .nav-dd-toggle, .t-arrow, .t-dots button, .hamburger, .orbit span,
+.why-card, .course-card, .project-card, .domain, [onclick] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2321B8E6'/%3E%3Cstop offset='1' stop-color='%237C5CFC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M6 4v20.5l5.4-4.9 3.7 8.1 3.6-1.7-3.7-7.9h7.6L6 4z' fill='url(%23g)' stroke='white' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M27 1.5Q27 8 33.5 8Q27 8 27 14.5Q27 8 20.5 8Q27 8 27 1.5Z' fill='%23FFD166' stroke='white' stroke-width='1' stroke-linejoin='round'/%3E%3Cpath d='M31 13.4Q31 16 33.6 16Q31 16 31 18.6Q31 16 28.4 16Q31 16 31 13.4Z' fill='%23ffffff' stroke='%237C5CFC' stroke-width='0.8' stroke-linejoin='round'/%3E%3C/svg%3E") 6 4, pointer;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]), textarea, [contenteditable="true"] {
+  cursor: text;
+}

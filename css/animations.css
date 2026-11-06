@@ -1,0 +1,103 @@
+/* =========================================================
+   NDR EdTech — Animations
+   Subtle motion only: fade-up, scroll reveal, hover states,
+   counters, mobile menu, accordion, slider transitions.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(33,184,230,0.35); }
+  50% { box-shadow: 0 0 0 10px rgba(33,184,230,0); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero-eyebrow .dot { animation: pulseGlow 2.4s infinite; }
+
+.hero-float-card {
+  animation: floatY 5s ease-in-out infinite;
+}
+
+.animate-in {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+/* Staggered reveal helper classes applied via JS (nth-child stagger through inline delay) */
+.reveal { will-change: opacity, transform; }
+
+/* Course card entrance stagger (applied by main.js IntersectionObserver) */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+.stagger-5 { transition-delay: 0.25s; }
+.stagger-6 { transition-delay: 0.3s; }
+
+/* Mobile nav slide */
+.mobile-nav a {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.mobile-nav.open a {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.mobile-nav.open a:nth-child(1) { transition-delay: 0.05s; }
+.mobile-nav.open a:nth-child(2) { transition-delay: 0.1s; }
+.mobile-nav.open a:nth-child(3) { transition-delay: 0.15s; }
+.mobile-nav.open a:nth-child(4) { transition-delay: 0.2s; }
+.mobile-nav.open a:nth-child(5) { transition-delay: 0.25s; }
+.mobile-nav.open a:nth-child(6) { transition-delay: 0.3s; }
+.mobile-nav.open a:nth-child(7) { transition-delay: 0.35s; }
+.mobile-nav.open a:nth-child(8) { transition-delay: 0.4s; }
+
+/* Testimonial slide transition */
+.testimonial-slide {
+  animation: fadeIn 0.5s ease;
+}
+
+/* FAQ answer smooth handled via max-height transition in style.css */
+
+/* Loading skeleton shimmer for lazy content (optional use) */
+.skeleton {
+  background: linear-gradient(90deg, #eef1f6 25%, #e4e9f2 37%, #eef1f6 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Button subtle press */
+.btn { will-change: transform; }
+
+/* Snowflake / hero decorative spin (very slow, subtle) */
+.snowflake-visual svg { animation: spinSlow 40s linear infinite; }

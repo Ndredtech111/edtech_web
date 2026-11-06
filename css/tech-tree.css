@@ -1,0 +1,150 @@
+/* Hero: IT technology tree panel (replaces the photo) */
+.hero-inner{grid-template-columns:1fr 1.08fr;gap:44px}
+.hero-frame.tt-frame{
+  --px:0;--py:0;
+  aspect-ratio:auto;display:flex;flex-direction:column;
+  background:
+    linear-gradient(rgba(23,38,168,.055) 1px,transparent 1px) 0 0/28px 28px,
+    linear-gradient(90deg,rgba(23,38,168,.055) 1px,transparent 1px) 0 0/28px 28px,
+    radial-gradient(520px 340px at 85% 0%,rgba(124,92,252,.12),transparent 70%),
+    radial-gradient(480px 320px at 5% 100%,rgba(34,211,238,.14),transparent 70%),
+    linear-gradient(165deg,#FFFFFF 0%,#EEF4FF 55%,#F6F8FF 100%);
+  border:1px solid rgba(23,38,168,.12);
+  box-shadow:0 30px 70px -28px rgba(23,38,168,.45);
+}
+.tt-copy{padding:30px 32px 0;position:relative;z-index:2}
+.tt-kicker{margin:0 0 8px;font-family:"Anton","Oswald",Impact,sans-serif;font-size:clamp(1.15rem,2.1vw,1.7rem);letter-spacing:.02em;color:#FF914D;line-height:1.1;text-transform:uppercase;animation:ttRise .8s var(--ease,ease) .5s both}
+.tt-title{margin:0;font-family:"Anton","Oswald",Impact,sans-serif;font-weight:400;font-size:clamp(1.25rem,2.35vw,2rem);line-height:1.12;letter-spacing:.012em;color:#1726A8;text-transform:uppercase;animation:ttWipe 1.3s var(--ease,ease) .75s both}
+@keyframes ttRise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes ttWipe{from{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(-10px)}to{opacity:1;clip-path:inset(0 0 0 0);transform:none}}
+.tt-sub{margin:0;padding:2px 0 22px;text-align:center;font-family:"Oswald","Anton",Impact,sans-serif;font-weight:600;font-size:clamp(.95rem,1.5vw,1.2rem);letter-spacing:.2em;color:#1726A8;text-transform:uppercase;position:relative;z-index:2;animation:ttRise .8s var(--ease,ease) 2.2s both}
+.tt-sub::before,.tt-sub::after{content:"";display:inline-block;width:34px;height:2px;background:#FF914D;vertical-align:middle;margin:0 14px}
+
+#techTree{flex:1;min-height:0;position:relative;margin-top:6px}
+.tt-svg{display:block;width:100%;height:auto;overflow:visible;will-change:transform;backface-visibility:hidden}
+.tt-svg-rain{position:absolute;left:0;top:0;pointer-events:none}
+
+/* code rain */
+.tt-code{font:600 11px/1 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;fill:#1726A8;opacity:0;animation:ttCode 11s ease-in-out infinite}
+@keyframes ttCode{0%{opacity:0;transform:translateY(14px)}25%,70%{opacity:.17}100%{opacity:0;transform:translateY(-26px)}}
+
+/* lines grow from the root */
+.tt-line{fill:none;stroke-linecap:round;stroke-width:2;opacity:.9}
+.tt-trunk{stroke-width:5}
+.tt-branch{stroke-width:3}
+.tt-twig{stroke-width:1.4;opacity:.65}
+.tt-grow{stroke-dasharray:1;stroke-dashoffset:1;animation:ttGrow var(--t,1.1s) cubic-bezier(.45,0,.2,1) var(--d,0s) forwards}
+@keyframes ttGrow{to{stroke-dashoffset:0}}
+
+/* nodes pop in */
+.tt-pop{opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);animation:ttPop .75s cubic-bezier(.34,1.56,.64,1) var(--d,0s) forwards}
+@keyframes ttPop{to{opacity:1;transform:scale(1)}}
+
+.tt-root rect{fill:url(#ttRoot)}
+.tt-root-t{fill:#fff;font:700 10.5px/1 "Inter",system-ui,sans-serif;letter-spacing:.14em;text-anchor:middle}
+.tt-crown-core{fill:#FF914D}
+.tt-crown-t{fill:#fff;font:800 10px/1 "Inter",system-ui,sans-serif;text-anchor:middle}
+.tt-orbit{fill:none;stroke:#FF914D;stroke-width:1.2;stroke-dasharray:3 5;opacity:.7;transform-box:fill-box;transform-origin:center;animation:ttSpin 14s linear infinite}
+@keyframes ttSpin{to{transform:rotate(360deg)}}
+
+/* domain nodes */
+.tt-domain{cursor:pointer;outline:none}
+.tt-halo{opacity:.14;transform-box:fill-box;transform-origin:center;animation:ttBreath 3.2s ease-in-out infinite}
+@keyframes ttBreath{0%,100%{transform:scale(.9);opacity:.1}50%{transform:scale(1.25);opacity:.24}}
+.tt-core{fill:#fff;stroke-width:2.2;transition:fill .3s,transform .3s}
+.tt-domain .tt-core{transform-box:fill-box;transform-origin:center}
+.tt-glyph{font:800 8.5px/1 "Inter",system-ui,sans-serif;text-anchor:middle;pointer-events:none;transition:fill .3s}
+.tt-label{fill:#1726A8;font:800 8.5px/1 "Inter",system-ui,sans-serif;letter-spacing:.12em;text-anchor:middle;pointer-events:none}
+
+/* leaf pills */
+.tt-leaf{cursor:pointer;outline:none}
+.tt-pill{fill:rgba(255,255,255,.92);stroke-width:1.1;transition:fill .3s,transform .3s,filter .3s;transform-box:fill-box;transform-origin:center}
+.tt-leaf-t{fill:#1726A8;font:600 9.2px/1 "Inter",system-ui,sans-serif;text-anchor:middle;pointer-events:none;transition:fill .3s}
+
+/* hover / focus: light up the node and its whole branch */
+.tt-leaf:hover .tt-pill,.tt-leaf:focus-visible .tt-pill{fill:var(--c);transform:scale(1.07);filter:drop-shadow(0 0 8px var(--c))}
+.tt-leaf:hover .tt-leaf-t,.tt-leaf:focus-visible .tt-leaf-t{fill:#fff}
+.tt-domain:hover .tt-core,.tt-domain:focus-visible .tt-core{fill:var(--c);transform:scale(1.14);filter:drop-shadow(0 0 12px var(--c))}
+.tt-domain:hover .tt-glyph,.tt-domain:focus-visible .tt-glyph{fill:#fff}
+.tt-b:hover .tt-line{opacity:1;stroke-width:3.2}
+.tt-b:hover .tt-twig{stroke-width:2}
+.tt-line{transition:stroke-width .3s,opacity .3s}
+
+.tt-paused .tt-code,.tt-paused .tt-orbit,.tt-paused .tt-halo{animation-play-state:paused}
+.tt-crown-halo{opacity:.18}
+
+/* floating glass cards */
+.hero-visual .float-card{background:rgba(255,255,255,.58);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);border:1px solid rgba(255,255,255,.8);box-shadow:0 18px 40px -16px rgba(23,38,168,.38),inset 0 1px 0 rgba(255,255,255,.9);z-index:5}
+.hero-visual .fc-1{left:-22px;bottom:-24px;right:auto;top:auto}
+.hero-visual .fc-2{right:-22px;bottom:-24px;left:auto;top:auto}
+.float-card strong{text-transform:uppercase;letter-spacing:.04em;font-size:.82rem}
+.fc-1 .fc-icon svg path{animation:fcPulse 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes fcPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.fc-2 .fc-icon svg path{stroke-dasharray:14;stroke-dashoffset:14;animation:fcTick 3s ease-in-out infinite}
+@keyframes fcTick{0%{stroke-dashoffset:14}35%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:14}}
+
+/* tablet */
+@media (max-width:1100px){
+  .hero-inner{grid-template-columns:1fr;gap:56px}
+  .hero-visual{max-width:640px}
+}
+/* mobile: heading, tree below, cards stacked underneath without overlap */
+@media (max-width:700px){
+  .tt-copy{padding:20px 18px 0}
+  .tt-leaf-t,.tt-pill{display:none}
+  .tt-dot{r:5}
+  .tt-label{font-size:11.5px;letter-spacing:.06em}
+  .tt-glyph{font-size:12px}
+  .tt-svg{margin-bottom:-4px}
+  .hero-visual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .hero-visual .hero-frame{grid-column:1/-1}
+  .hero-visual .float-card{display:flex;position:static;animation:cardIn .8s var(--ease,ease) 1.2s both}
+}
+@media (max-width:420px){.hero-visual{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  .tt-grow{animation:none;stroke-dashoffset:0}
+  .tt-pop{animation:none;opacity:1;transform:none}
+  .tt-code{animation:none;opacity:.12}
+  .tt-orbit,.tt-halo,.fc-1 .fc-icon svg path,.fc-2 .fc-icon svg path{animation:none}
+  .fc-2 .fc-icon svg path{stroke-dashoffset:0}
+  .tt-kicker,.tt-title,.tt-sub{animation:none}
+}
+
+/* Desktop: size the whole panel to the first screen (header ~76px + hero padding + card overhang) */
+@media (min-width:1101px){
+  .hero{padding:34px 0 64px}
+  .hero-frame.tt-frame{height:clamp(500px,calc(100vh - 160px),780px)}
+  .tt-copy{padding:22px 28px 0}
+  .tt-kicker{font-size:clamp(1rem,1.6vw,1.4rem);margin-bottom:6px}
+  .tt-title{font-size:clamp(1.1rem,1.75vw,1.65rem)}
+  #techTree{padding:0 10px}
+  .tt-svg{width:100%;height:100%}
+  .tt-sub{padding:0 0 16px;font-size:clamp(.85rem,1.2vw,1.05rem)}
+}
+@media (min-width:1101px){
+  .hero-visual{align-self:start}
+  .hero-frame.tt-frame{height:clamp(480px,calc(100vh - 168px),780px)}
+}
+@media (min-width:1101px){
+  .hero-frame.tt-frame{height:clamp(470px,calc(100vh - 184px),780px)}
+  .hero-visual .fc-1,.hero-visual .fc-2{bottom:-44px}
+  .hero-visual .float-card{padding:11px 14px}
+}
+
+/* Hero headline: same font + gradient as the section headings */
+.hero h1{font-family:"Plus Jakarta Sans","Inter",system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.12;font-size:clamp(2.2rem,4.4vw,3.6rem)}
+.hero h1 .w{padding-bottom:.18em;margin-bottom:-.18em}
+.hero h1 .w > span,.hero h1 em .w > span{background-image:linear-gradient(90deg,#06b6d4 0%,#3b82f6 50%,#8b5cf6 100%);background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero h1 em{font-style:normal;background:none;animation:none}
+/* no word-split (reduced motion / no JS): paint the gradient on the heading itself */
+.hero h1:not(.h1-words){background-image:linear-gradient(90deg,#06b6d4 0%,#3b82f6 50%,#8b5cf6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero h1:not(.h1-words) em{color:inherit;-webkit-text-fill-color:inherit}
+
+/* wait for the page to settle, then play; lightweight fades for the many small parts */
+.tt-fade{opacity:0;animation:ttFadeIn .7s ease var(--d,0s) forwards}
+@keyframes ttFadeIn{to{opacity:1}}
+.tt-twig.tt-fade{animation-name:ttFadeTwig}
+@keyframes ttFadeTwig{to{opacity:.65}}
+.tt-wait .tt-grow,.tt-wait .tt-pop,.tt-wait .tt-fade,.tt-wait .tt-code,.tt-wait .tt-halo,.tt-wait .tt-orbit{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.tt-fade{animation:none;opacity:1}.tt-twig.tt-fade{opacity:.65}}

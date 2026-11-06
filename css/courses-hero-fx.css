@@ -1,0 +1,23 @@
+/* Courses hero: course-chip marquees + light beams (replaces the dot network) */
+.page-hero.has-ch .page-hero-canvas{display:none!important}
+.page-hero.has-ch{isolation:isolate;background:linear-gradient(135deg,#071a41 0%,#0f3a8a 45%,#1769e0 100%)!important}
+.page-hero.has-ch::after{z-index:0}
+.page-hero.has-ch>*:not(.ch){position:relative;z-index:2}
+.page-hero.has-ch>.ch{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden;pointer-events:none}
+
+.ch-beam{position:absolute;top:-40%;height:180%;width:90px;background:linear-gradient(180deg,transparent,rgba(160,215,255,.22),transparent);transform:rotate(22deg);filter:blur(8px);will-change:transform;animation:chBeam 14s ease-in-out infinite alternate}
+.ch-beam.b1{left:8%}.ch-beam.b2{left:46%;width:140px;animation-duration:19s;animation-delay:-6s;opacity:.7}.ch-beam.b3{left:78%;animation-duration:16s;animation-delay:-3s}
+@keyframes chBeam{to{transform:translateX(220px) rotate(22deg)}}
+
+.ch-row{position:absolute;left:0;right:0;overflow:hidden;white-space:nowrap;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.ch-row.top{top:12px}.ch-row.bot{bottom:12px}
+.ch-track{display:inline-flex;gap:14px;padding-right:14px;will-change:transform;animation:chScroll 48s linear infinite}
+.ch-row.rev .ch-track{animation-direction:reverse;animation-duration:56s}
+@keyframes chScroll{to{transform:translateX(-16.6667%)}}
+.ch-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 16px 6px 12px;border-radius:999px;font:600 12.5px Inter,system-ui,sans-serif;letter-spacing:.03em;color:rgba(255,255,255,.9);
+  background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.ch-chip svg{width:17px;height:17px;color:#bfeaff;flex:none}
+
+@media (max-width:640px){.ch-chip{font-size:11.5px;padding:5px 12px 5px 9px}.ch-beam.b2{display:none}}
+@media (prefers-reduced-motion:reduce){.ch *{animation:none!important}}

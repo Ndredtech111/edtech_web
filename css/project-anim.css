@@ -1,0 +1,84 @@
+.project-thumb.pa-thumb{position:relative;overflow:hidden;padding:0;display:block}
+.pa-thumb::before{content:"";position:absolute;inset:-26px;opacity:.18;will-change:transform;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:26px 26px;animation:paGrid 12s linear infinite}
+@keyframes paGrid{to{transform:translate(26px,26px)}}
+.pa-svg{position:absolute;inset:0;width:100%;height:calc(100% - 22px)}
+.pa-label{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);padding:4px 14px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.04em;color:#fff;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);white-space:nowrap}
+.pa-line{fill:rgba(255,255,255,.07);stroke:rgba(255,255,255,.85);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.pa-line path,.pa-line ellipse{stroke:rgba(255,255,255,.85);stroke-width:1.3}
+.pa-line path{fill:none}
+.pa-line ellipse{fill:rgba(255,255,255,.1)}
+.pa-trace{fill:none;stroke:rgba(255,255,255,.3);stroke-width:1.2;stroke-dasharray:3 4}
+.pa-mv{transform-box:view-box;will-change:transform,opacity}
+.pa-pk{fill:#d6f1ff}
+.pa-halo{fill:rgba(140,210,255,.28)}
+.pa-cap{fill:rgba(255,255,255,.75);font:600 7.5px/1 Inter,system-ui,sans-serif;letter-spacing:.1em;text-anchor:middle}
+.pa-dot{fill:#bfeaff;animation:paBlink 1.6s ease-in-out infinite}
+.pa-spin{transform-box:view-box;animation:paSpin 6s linear infinite}
+@keyframes paSpin{to{transform:rotate(360deg)}}
+@keyframes paBlink{0%,100%{opacity:.25}50%{opacity:1}}
+.pa-glow{animation:paGlow 2.6s ease-in-out infinite}
+@keyframes paGlow{0%,100%{opacity:.75}50%{opacity:1}}
+.pa-bar{transform-box:view-box;fill:rgba(190,234,255,.85);animation:paBar 2.8s ease-in-out infinite}
+@keyframes paBar{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.pa-node{animation:paNode 6s ease-in-out infinite}
+@keyframes paNode{0%,100%{fill:rgba(255,255,255,.07)}12%,25%{fill:rgba(190,234,255,.9)}}
+.pa-code{fill:rgba(190,234,255,.8);transform-box:fill-box;transform-origin:left center;animation:paType 4.5s ease-in-out infinite}
+@keyframes paType{0%{transform:scaleX(0)}35%,85%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.pa-cursor{fill:#fff;animation:paBlink 1s steps(1) infinite}
+.pa-tick,.pa-tick2,.pa-draw{fill:none;stroke:#8dffc5;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:paDraw 4.4s ease-in-out infinite}
+.pa-tick2{stroke-width:2.2;stroke:#fff;animation-duration:3s}
+.pa-draw{stroke:#bfeaff;stroke-width:2;stroke-dasharray:400;stroke-dashoffset:400;animation:paDraw2 4s ease-in-out infinite}
+@keyframes paDraw{0%{stroke-dashoffset:60}35%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:60}}
+@keyframes paDraw2{0%{stroke-dashoffset:400}45%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:400}}
+.pa-scan{fill:rgba(190,255,230,.8);filter:drop-shadow(0 0 6px #8dffc5);animation:paScan 3s ease-in-out infinite}
+@keyframes paScan{0%,100%{transform:translateY(0)}50%{transform:translateY(100px)}}
+@media (prefers-reduced-motion:reduce){.pa-thumb *,.pa-thumb::before{animation:none!important}.pa-tick,.pa-tick2,.pa-draw{stroke-dashoffset:0!important}}
+
+.pa-thumb.pa-off,.pa-thumb.pa-off *,.pa-thumb.pa-off::before{animation-play-state:paused!important}
+.pa-svg{contain:strict;will-change:transform}
+
+/* animated scene used as a course thumbnail fallback */
+.course-thumb .project-thumb.course-anim{position:absolute;inset:0;width:100%;height:100%;font-size:0;color:transparent}
+.course-thumb .course-anim .pa-svg{height:100%}
+.course-thumb .course-anim .pa-label{display:none}
+.course-thumb .course-anim{z-index:0}
+.course-thumb .thumb-category{z-index:2}
+
+/* ---- course scene primitives (smooth, eased) ---- */
+.pa-a{animation:paMove 6s cubic-bezier(.45,0,.2,1) infinite both}
+@keyframes paMove{0%{opacity:0;transform:translate(0,0)}12%{opacity:1;transform:translate(0,0)}55%{opacity:1;transform:translate(var(--dx),var(--dy))}88%{opacity:1;transform:translate(var(--dx),var(--dy))}100%{opacity:0;transform:translate(var(--dx),var(--dy))}}
+.pa-hot{fill:rgba(190,234,255,.32)!important;stroke:#d6f1ff}
+.pa-bit{fill:rgba(190,234,255,.7)}
+.pa-drop{animation:paDrop 5.5s cubic-bezier(.3,.9,.3,1) infinite both}
+@keyframes paDrop{0%{opacity:0;transform:translateY(-46px)}16%{opacity:1;transform:translateY(0)}84%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+.pa-pulse{transform-box:fill-box;transform-origin:center;animation:paPulse 2.6s ease-in-out infinite}
+@keyframes paPulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.14);opacity:1}}
+.pa-hl{fill:rgba(190,234,255,.22);stroke:rgba(214,241,255,.7);stroke-width:1;animation:paHl 4.2s cubic-bezier(.65,0,.35,1) infinite alternate}
+@keyframes paHl{from{transform:translateY(0)}to{transform:translateY(var(--dy))}}
+.pa-ring{fill:none;stroke:#bfeaff;stroke-width:6;stroke-linecap:round;transform:rotate(-90deg);transform-box:fill-box;transform-origin:center;stroke-dasharray:0 140;animation:paRing 5s ease-in-out infinite}
+@keyframes paRing{0%{stroke-dasharray:0 140}45%,85%{stroke-dasharray:94 140}100%{stroke-dasharray:0 140}}
+.pa-wick{fill:none;stroke:rgba(255,255,255,.55);stroke-width:1.2;stroke-linecap:round}
+.pa-glyph{fill:rgba(190,234,255,.4);font:800 34px/1 Poppins,Inter,system-ui,sans-serif;text-anchor:middle;animation:paPulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.pa-thumb *{backface-visibility:hidden}
+@media (prefers-reduced-motion:reduce){.pa-a,.pa-drop,.pa-pulse,.pa-hl,.pa-glyph{animation:none!important}.pa-a,.pa-drop{opacity:1}.pa-ring{stroke-dasharray:94 140!important}}
+
+/* animated scene as the course-detail hero visual */
+.cd-visual{position:relative}
+.cd-visual .project-thumb.course-anim{position:absolute;inset:0;width:100%;height:100%;font-size:0;color:transparent}
+.cd-visual .course-anim .pa-svg{height:100%}
+.cd-visual .course-anim .pa-label{display:none}
+
+/* scrolling concept strip inside the course-detail hero box */
+.cd-visual .pa-marquee{position:absolute;left:0;right:0;bottom:14px;z-index:3;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.pa-track{display:flex;width:max-content;gap:10px;padding-left:10px;animation:paMarquee 40s linear infinite;will-change:transform}
+.pa-marquee:hover .pa-track{animation-play-state:paused}
+.pa-chip{flex:none;padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.02em;color:#fff;white-space:nowrap;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(4px)}
+@keyframes paMarquee{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.pa-track{animation:none!important}}
+.cd-visual .course-anim .pa-svg{height:calc(100% - 30px)}
+/* over a photo: soft dark base so the chips stay readable */
+.cd-visual .pa-marquee{padding:22px 0 14px;bottom:0;background:linear-gradient(0deg,rgba(7,26,65,.62),rgba(7,26,65,0))}
+.cd-visual .course-anim ~ .pa-marquee{background:none;padding:0;bottom:14px}
+.cd-visual .pa-chip{background:rgba(7,26,65,.78);border-color:rgba(255,255,255,.35)}
+.cd-visual .course-anim ~ .pa-marquee .pa-chip{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3)}
