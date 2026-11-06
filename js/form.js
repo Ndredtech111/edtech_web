@@ -77,13 +77,36 @@ function validateField(field) {
  * function with a real integration, e.g.:
  *   fetch("https://your-api.example.com/leads", { method: "POST", body: new FormData(form) })
  */
+const FORM_WHATSAPP_NUMBER = "918722355666";
+
+/** Builds a readable WhatsApp message from the form's fields. */
+function buildWhatsappMessage(form) {
+  const heading = (form.getAttribute("data-wa-title") ||
+    (form.querySelector('[name="mode"]') ? "New Free Demo Request" : "New Enquiry")) + " - NDR EdTech";
+  const labels = { name: "Name", phone: "Phone", email: "Email", course: "Course", mode: "Training Mode", message: "Message" };
+  const lines = [heading, ""];
+  Object.keys(labels).forEach((key) => {
+    const el = form.querySelector(`[name="${key}"]`);
+    if (!el) return;
+    let value = el.value.trim();
+    if (el.tagName === "SELECT") value = el.selectedOptions[0] ? el.selectedOptions[0].textContent.trim() : "";
+    if (value) lines.push(`*${labels[key]}:* ${value}`);
+  });
+  lines.push("", "(Sent from the NDR EdTech website)");
+  return lines.join("\n");
+}
+
 function submitForm(form, successBox) {
   const submitBtn = form.querySelector('button[type="submit"]');
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.dataset.originalText = submitBtn.textContent;
-    submitBtn.textContent = "Submitting...";
+    submitBtn.textContent = "Opening WhatsApp...";
   }
+
+  // Open synchronously (inside the click handler) so popup blockers allow it.
+  const url = `https://wa.me/${FORM_WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsappMessage(form))}`;
+  window.open(url, "_blank", "noopener");
 
   setTimeout(() => {
     form.reset();

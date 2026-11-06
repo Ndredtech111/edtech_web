@@ -1,0 +1,26 @@
+/* NDR EdTech — WhatsApp enquiry chat widget */
+.ndr-chat{position:fixed;right:24px;bottom:96px;z-index:120;width:360px;max-width:calc(100vw - 24px);height:520px;max-height:calc(100vh - 120px);display:flex;flex-direction:column;background:#fff;border-radius:18px;box-shadow:0 24px 60px -12px rgba(7,26,65,.45);overflow:hidden;font-family:inherit;opacity:0;transform:translateY(16px) scale(.97);pointer-events:none;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+.ndr-chat.open{opacity:1;transform:none;pointer-events:auto;visibility:visible}
+.ndr-chat-head{display:flex;align-items:center;gap:10px;padding:14px 16px;background:linear-gradient(120deg,#075E54,#25D366);color:#fff}
+.ndr-chat-head .av{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-weight:700}
+.ndr-chat-head .tt{flex:1;line-height:1.25}
+.ndr-chat-head .tt b{display:block;font-size:15px}
+.ndr-chat-head .tt span{font-size:12px;opacity:.9}
+.ndr-chat-head button{background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;padding:4px 8px}
+.ndr-chat-body{flex:1;overflow-y:auto;padding:14px;background:#ECE5DD;display:flex;flex-direction:column;gap:8px}
+.ndr-msg{max-width:84%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,.08);white-space:pre-wrap;word-wrap:break-word;animation:ndrIn .25s ease}
+.ndr-msg.bot{background:#fff;color:#1b2430;align-self:flex-start;border-top-left-radius:3px}
+.ndr-msg.user{background:#DCF8C6;color:#1b2430;align-self:flex-end;border-top-right-radius:3px}
+.ndr-msg.err{background:#FDECEA;color:#B3261E}
+@keyframes ndrIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ndr-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:100%}
+.ndr-chips button{border:1px solid #25D366;background:#fff;color:#128C4A;border-radius:16px;padding:6px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.ndr-chips button:hover{background:#25D366;color:#fff}
+.ndr-chat-foot{display:flex;gap:8px;padding:10px;background:#F0F0F0;border-top:1px solid #ddd}
+.ndr-chat-foot input,.ndr-chat-foot select{flex:1;min-width:0;border:1px solid #d7d7d7;border-radius:20px;padding:10px 14px;font-size:14px;font-family:inherit;background:#fff;outline:none}
+.ndr-chat-foot input:focus,.ndr-chat-foot select:focus{border-color:#25D366}
+.ndr-chat-foot button{border:0;background:#25D366;color:#fff;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:18px;flex:none}
+.ndr-chat-foot[hidden]{display:none}
+.ndr-send-wa{align-self:flex-start;display:inline-block;background:#25D366;color:#fff!important;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:22px;font-size:14px}
+@media(max-width:768px){.ndr-chat{right:8px;bottom:78px;height:calc(100vh - 100px)}}
+@media(prefers-reduced-motion:reduce){.ndr-chat,.ndr-msg{transition:none;animation:none}}
