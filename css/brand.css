@@ -22,3 +22,6 @@
 @keyframes brandReveal{from{clip-path:inset(0 100% 0 0);opacity:0;transform:translateX(-12px)}to{clip-path:inset(0 0 0 0);opacity:1;transform:none}}
 @keyframes brandShine{0%{background-position:100% 0}60%,100%{background-position:-60% 0}}
 @media(prefers-reduced-motion:reduce){.site-header .brand span:not(.brand-mark){animation:none;color:#0B1B3F!important;-webkit-text-fill-color:#0B1B3F;background:none}}
+
+/* "Demo coming soon" label on course cards / detail pages */
+.demo-soon{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;font-weight:600;color:#5b6b85;background:rgba(22,119,255,.08);border:1px dashed rgba(22,119,255,.35);padding:6px 12px;border-radius:999px}

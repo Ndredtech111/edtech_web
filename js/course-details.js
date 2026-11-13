@@ -100,7 +100,7 @@ function renderCourse(course) {
     ? `<button class="btn btn-ghost-light" type="button" data-demo-url="${encodeURIComponent(course.demoUrl)}">
          <span aria-hidden="true">&#9654;</span> Watch Free Demo
        </button>`
-    : "";
+    : `<span class="demo-soon">&#9654; Demo video coming soon &mdash; stay tuned!</span>`;
 
   const initials = course.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 

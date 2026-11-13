@@ -56,7 +56,7 @@ const courses = [
     level: "Beginner to Advanced",
     description: "Master Snowflake architecture, SQL, data loading, Snowpipe, performance optimization and real-world data engineering concepts.",
     image: "assets/courses/snowflake.png",
-    demoUrl: "https://youtu.be/hlKd_DGSXNo",
+    demoUrl: "",
     featured: true,
     topics: [
       "Snowflake Architecture", "Cloud Concepts", "Virtual Warehouses", "Databases",
@@ -577,7 +577,7 @@ function renderCourseCard(course) {
     ? `<button class="btn-play" type="button" data-demo-url="${encodeURIComponent(course.demoUrl)}" aria-label="Watch ${course.name} demo video">
          <span class="play-icon" aria-hidden="true">&#9654;</span> Watch Demo
        </button>`
-    : "";
+    : `<span class="demo-soon">&#9654; Demo video coming soon &mdash; stay tuned!</span>`;
 
   const initials = course.name
     .split(" ")
