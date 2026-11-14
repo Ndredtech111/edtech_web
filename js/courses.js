@@ -427,6 +427,46 @@ const courses = [
       "Security & Roles", "Reporting Tools (OTBI/BIP)", "Integrations Overview"]
   },
   {
+    id: "sap-grc",
+    name: "SAP GRC - SECURITIES",
+    category: "ERP",
+    level: "Beginner to Advanced",
+    description: "Master SAP Governance, Risk & Compliance — Access Control, Process Control and Risk Management — with real-time implementation scenarios.",
+    image: "assets/courses/sap-grc.png",
+    demoUrl: "",
+    topics: [
+      "GRC Fundamentals & Architecture", "SAP GRC Access Control Overview", "Segregation of Duties (SoD)",
+      "Access Risk Analysis (ARA)", "Rule Set & Risk Configuration", "Emergency Access Management (EAM)",
+      "Access Request Management (ARM)", "Business Role Management (BRM)", "Workflow & MSMP Configuration",
+      "Process Control (PC)", "Risk Management (RM)", "Role Design & Authorization Concepts",
+      "User Provisioning & Periodic Reviews", "Audit & Compliance Reporting", "Real-Time Implementation Scenarios"
+    ],
+    curriculum: [
+      "Introduction to GRC, Compliance & SAP GRC Architecture",
+      "SAP Authorizations, Roles & Profiles Basics",
+      "Access Risk Analysis & Segregation of Duties",
+      "Rule Set Design, Risk IDs & Mitigation Controls",
+      "Emergency Access Management (Firefighter)",
+      "Access Request Management & MSMP Workflows",
+      "Business Role Management & Role Lifecycle",
+      "Process Control: Controls, Testing & Monitoring",
+      "Risk Management: Assessment, Response & Reporting",
+      "Real-Time Implementation Scenarios & Capstone Project"
+    ],
+    tools: ["SAP GRC Access Control", "SAP Process Control", "SAP Risk Management", "SAP NetWeaver / SAP GUI", "SU01 / PFCG", "MSMP Workflows"],
+    projects: [
+      "Access risk analysis and SoD remediation for a sample enterprise landscape",
+      "End-to-end access request workflow configured with MSMP and approvals",
+      "Firefighter (EAM) setup with controller review and log reporting"
+    ],
+    prerequisites: "Basic awareness of SAP (modules or security) is helpful but not mandatory — GRC and authorization concepts are covered from scratch.",
+    faqs: [
+      { q: "Do I need SAP experience before joining SAP GRC?", a: "Basic SAP awareness helps, but we begin with SAP authorization and compliance fundamentals before moving into GRC." },
+      { q: "Which GRC components are covered?", a: "Access Control (ARA, EAM, ARM, BRM) is the core, with an introduction to Process Control and Risk Management." },
+      { q: "Will there be hands-on practice?", a: "Yes, the course includes real-time implementation scenarios, labs and a capstone project." }
+    ]
+  },
+  {
     id: "pega-prpc",
     name: "Pega PRPC",
     category: "Business",
@@ -515,6 +555,13 @@ const courses = [
       "Communication Planning", "Resistance Management", "Change Measurement & Sustainment"]
   }
 ];
+
+/* Priority courses are always listed first, in this order. Everything else keeps its order below. */
+const PRIORITY_COURSE_IDS = ["snowflake", "business-analyst", "sap-grc"];
+courses.sort((a, b) => {
+  const ia = PRIORITY_COURSE_IDS.indexOf(a.id), ib = PRIORITY_COURSE_IDS.indexOf(b.id);
+  return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+});
 
 /* ---------------------------------------------------------
    Rendering helpers (used by index.html and courses.html)
