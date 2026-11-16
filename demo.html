@@ -40,6 +40,7 @@
 }
 </style>
 <link rel="stylesheet" href="css/brand.css?v=2">
+<link rel="stylesheet" href="css/clock.css?v=2">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -136,6 +137,60 @@
             <input type="email" id="fdEmail" name="email" data-rule="email" placeholder="you@example.com" required>
             <span class="form-error">Please enter a valid email address.</span>
           </div>
+            <div class="form-group">
+              <label for="fdQual">Qualification</label>
+              <select id="fdQual" name="qualification" data-rule="required">
+                <option value="">Select your qualification</option>
+                  <optgroup label="Diploma">
+                    <option value="Diploma - Engineering / Polytechnic">Diploma - Engineering / Polytechnic</option>
+                    <option value="Diploma - Computer Applications / IT">Diploma - Computer Applications / IT</option>
+                    <option value="Diploma - Other">Diploma - Other</option>
+                  </optgroup>
+                  <optgroup label="Undergraduate (Degree)">
+                    <option value="B.E / B.Tech">B.E / B.Tech</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="B.Sc - Computer Science / IT">B.Sc - Computer Science / IT</option>
+                    <option value="BCA">BCA</option>
+                    <option value="B.Com">B.Com</option>
+                    <option value="BBA / BBM">BBA / BBM</option>
+                    <option value="BA">BA</option>
+                    <option value="B.Pharm">B.Pharm</option>
+                    <option value="B.Arch">B.Arch</option>
+                    <option value="B.Ed">B.Ed</option>
+                    <option value="LLB">LLB</option>
+                    <option value="MBBS / BDS / BAMS / BHMS">MBBS / BDS / BAMS / BHMS</option>
+                    <option value="B.Sc - Nursing">B.Sc - Nursing</option>
+                    <option value="B.Voc">B.Voc</option>
+                    <option value="Other Bachelor Degree">Other Bachelor Degree</option>
+                  </optgroup>
+                  <optgroup label="Postgraduate">
+                    <option value="M.E / M.Tech">M.E / M.Tech</option>
+                    <option value="M.Sc">M.Sc</option>
+                    <option value="MCA">MCA</option>
+                    <option value="M.Com">M.Com</option>
+                    <option value="MBA / PGDM">MBA / PGDM</option>
+                    <option value="MA">MA</option>
+                    <option value="M.Pharm">M.Pharm</option>
+                    <option value="M.Arch">M.Arch</option>
+                    <option value="M.Ed">M.Ed</option>
+                    <option value="LLM">LLM</option>
+                    <option value="MD / MS">MD / MS</option>
+                    <option value="PG Diploma">PG Diploma</option>
+                    <option value="Other Master Degree">Other Master Degree</option>
+                  </optgroup>
+                  <optgroup label="Doctorate">
+                    <option value="M.Phil">M.Phil</option>
+                    <option value="Ph.D">Ph.D</option>
+                    <option value="Post-Doctoral">Post-Doctoral</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="10th / SSLC">10th / SSLC</option>
+                    <option value="12th / PUC / Intermediate">12th / PUC / Intermediate</option>
+                    <option value="Other">Other</option>
+                  </optgroup>
+              </select>
+              <span class="form-error">Please select your qualification.</span>
+            </div>
           <div class="form-row">
             <div class="form-group">
               <label for="fdCourse">Course Interested In</label>
@@ -157,9 +212,10 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="fdMessage">Message</label>
-            <textarea id="fdMessage" name="message" placeholder="Tell us about your background and goals (optional)"></textarea>
-          </div>
+              <label for="fdMessage">Message</label>
+              <textarea id="fdMessage" name="message" data-rule="required" placeholder="Tell us about your background and goals" required></textarea>
+              <span class="form-error">Please write a short message (no links allowed).</span>
+            </div>
           <button type="submit" class="btn btn-primary btn-block">Request Free Demo</button>
           <div class="form-success"><span aria-hidden="true">&#10003;</span> Thank you! Our career counsellor will contact you shortly.</div>
           <p class="form-note">By submitting, you agree to be contacted by NDR EdTech regarding your enquiry.</p>
@@ -263,7 +319,7 @@
 
 <script src="js/courses.js?v=11"></script>
 <script src="js/main.js"></script>
-<script src="js/form.js"></script>
+<script src="js/form.js?v=4"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const courseSelect = document.getElementById("fdCourse");
@@ -280,6 +336,8 @@
 </script>
 <script src="js/nav-dropdown.js?v=2"></script>
 <script src="js/footer-water.js?v=4" defer></script>
-<script src="js/chatbot.js" defer></script>
+<script src="js/chatbot.js?v=3" defer></script>
+<script src="js/clock.js" defer></script>
+<script src="js/lead-api.js?v=2"></script>
 </body>
 </html>

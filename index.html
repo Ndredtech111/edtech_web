@@ -648,6 +648,7 @@ p{margin:0}
 <link rel="stylesheet" href="css/tech-tree.css?v=10">
 <link rel="stylesheet" href="css/chatbot.css">
 <link rel="stylesheet" href="css/brand.css?v=2">
+<link rel="stylesheet" href="css/clock.css?v=2">
 </head>
 <body>
 <script>
@@ -1110,6 +1111,60 @@ p{margin:0}
               <input type="email" id="demoEmail" name="email" data-rule="email" placeholder="you@example.com" autocomplete="email" required>
               <span class="form-error">Please enter a valid email address.</span>
             </div>
+            <div class="form-group">
+              <label for="demoQual">Qualification</label>
+              <select id="demoQual" name="qualification" data-rule="required">
+                <option value="">Select your qualification</option>
+                  <optgroup label="Diploma">
+                    <option value="Diploma - Engineering / Polytechnic">Diploma - Engineering / Polytechnic</option>
+                    <option value="Diploma - Computer Applications / IT">Diploma - Computer Applications / IT</option>
+                    <option value="Diploma - Other">Diploma - Other</option>
+                  </optgroup>
+                  <optgroup label="Undergraduate (Degree)">
+                    <option value="B.E / B.Tech">B.E / B.Tech</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="B.Sc - Computer Science / IT">B.Sc - Computer Science / IT</option>
+                    <option value="BCA">BCA</option>
+                    <option value="B.Com">B.Com</option>
+                    <option value="BBA / BBM">BBA / BBM</option>
+                    <option value="BA">BA</option>
+                    <option value="B.Pharm">B.Pharm</option>
+                    <option value="B.Arch">B.Arch</option>
+                    <option value="B.Ed">B.Ed</option>
+                    <option value="LLB">LLB</option>
+                    <option value="MBBS / BDS / BAMS / BHMS">MBBS / BDS / BAMS / BHMS</option>
+                    <option value="B.Sc - Nursing">B.Sc - Nursing</option>
+                    <option value="B.Voc">B.Voc</option>
+                    <option value="Other Bachelor Degree">Other Bachelor Degree</option>
+                  </optgroup>
+                  <optgroup label="Postgraduate">
+                    <option value="M.E / M.Tech">M.E / M.Tech</option>
+                    <option value="M.Sc">M.Sc</option>
+                    <option value="MCA">MCA</option>
+                    <option value="M.Com">M.Com</option>
+                    <option value="MBA / PGDM">MBA / PGDM</option>
+                    <option value="MA">MA</option>
+                    <option value="M.Pharm">M.Pharm</option>
+                    <option value="M.Arch">M.Arch</option>
+                    <option value="M.Ed">M.Ed</option>
+                    <option value="LLM">LLM</option>
+                    <option value="MD / MS">MD / MS</option>
+                    <option value="PG Diploma">PG Diploma</option>
+                    <option value="Other Master Degree">Other Master Degree</option>
+                  </optgroup>
+                  <optgroup label="Doctorate">
+                    <option value="M.Phil">M.Phil</option>
+                    <option value="Ph.D">Ph.D</option>
+                    <option value="Post-Doctoral">Post-Doctoral</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="10th / SSLC">10th / SSLC</option>
+                    <option value="12th / PUC / Intermediate">12th / PUC / Intermediate</option>
+                    <option value="Other">Other</option>
+                  </optgroup>
+              </select>
+              <span class="form-error">Please select your qualification.</span>
+            </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="demoCourse">Course Interested In</label>
@@ -1131,8 +1186,9 @@ p{margin:0}
               </div>
             </div>
             <div class="form-group">
-              <label for="demoMessage">Message <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
-              <textarea id="demoMessage" name="message" placeholder="Tell us about your background and goals"></textarea>
+              <label for="demoMessage">Message</label>
+              <textarea id="demoMessage" name="message" data-rule="required" placeholder="Tell us about your background and goals" required></textarea>
+              <span class="form-error">Please write a short message (no links allowed).</span>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Request Free Demo</button>
             <div class="form-success" role="status"><span aria-hidden="true">&#10003;</span> Thank you! Our career counsellor will contact you shortly.</div>
@@ -1465,12 +1521,18 @@ p{margin:0}
     name: function (v) { return v.trim().length >= 2; },
     phone: function (v) { return /^[6-9]\d{9}$/.test(v.replace(/[\s-]/g, "").replace(/^(\+91|91|0)/, "")); },
     email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); },
-    required: function (v) { return v.trim() !== ""; }
+    required: function (v) { return v.trim() !== ""; },
+    nolink: function () { return true; }
   };
+  var LINKRE = /(https?:\/\/|ftp:\/\/|www\.|<\s*a\b|href\s*=|\b[a-z0-9-]{3,}.(com|in|net|org|io|co|me|ly|info|biz|xyz|app|dev|link|site|online|store|tech|shop|live|page|gl|be|to)\b)/i;
   document.querySelectorAll("form[data-validate]").forEach(function (form) {
     var fields = form.querySelectorAll("[data-rule]");
     function check(f) {
       var ok = rules[f.dataset.rule](f.value);
+      var err = f.closest(".form-group").querySelector(".form-error");
+      if (err && !err.dataset.orig) err.dataset.orig = err.textContent;
+      if (ok && (f.tagName === "TEXTAREA" || f.type === "text") && LINKRE.test(f.value)) { ok = false; if (err) err.textContent = "Links are not allowed."; }
+      else if (err && err.dataset.orig) err.textContent = err.dataset.orig;
       f.closest(".form-group").classList.toggle("invalid", !ok);
       return ok;
     }
@@ -1485,7 +1547,7 @@ p{margin:0}
       fields.forEach(function (f) { if (!check(f)) { valid = false; first = first || f; } });
       if (!valid) { first.focus(); return; }
       /* Send the enquiry to WhatsApp (opens in a new tab with the message pre-filled) */
-      var labels = { name: "Name", phone: "Phone", email: "Email", course: "Course", mode: "Training Mode", message: "Message" };
+      var labels = { name: "Name", phone: "Phone", email: "Email", qualification: "Qualification", course: "Course", mode: "Training Mode", message: "Message" };
       var lines = ["New Free Demo Request - NDR EdTech", ""];
       Object.keys(labels).forEach(function (k) {
         var el = form.querySelector('[name="' + k + '"]');
@@ -1496,6 +1558,7 @@ p{margin:0}
       });
       lines.push("", "(Sent from the NDR EdTech website)");
       window.open("https://wa.me/918722355666?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+      if (window.ndrSaveLead) window.ndrSaveLead(window.ndrFormData(form), "form:index.html"); /* also store in GoDaddy DB */
       form.querySelector(".form-success").classList.add("show");
       form.reset();
     });
@@ -1541,6 +1604,8 @@ p{margin:0}
 <script src="js/footer-water.js?v=4" defer></script>
 <script src="js/cta-fx.js?v=2" defer></script>
 <script src="js/tech-tree.js?v=6" defer></script>
-<script src="js/chatbot.js" defer></script>
+<script src="js/chatbot.js?v=3" defer></script>
+<script src="js/clock.js" defer></script>
+<script src="js/lead-api.js?v=2"></script>
 </body>
 </html>

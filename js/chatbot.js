@@ -8,6 +8,8 @@
   "use strict";
   var WA_NUMBER = "918722355666";
   var MODES = ["Online", "Classroom", "Weekend", "Corporate"];
+  var QUALS = ["Diploma - Engineering / Polytechnic","Diploma - Computer Applications / IT","Diploma - Other","B.E / B.Tech","B.Sc","B.Sc - Computer Science / IT","BCA","B.Com","BBA / BBM","BA","B.Pharm","B.Arch","B.Ed","LLB","MBBS / BDS / BAMS / BHMS","B.Sc - Nursing","B.Voc","Other Bachelor Degree","M.E / M.Tech","M.Sc","MCA","M.Com","MBA / PGDM","MA","M.Pharm","M.Arch","M.Ed","LLM","MD / MS","PG Diploma","Other Master Degree","M.Phil","Ph.D","Post-Doctoral","10th / SSLC","12th / PUC / Intermediate","Other"];
+  var LINKRE = /(https?:\/\/|ftp:\/\/|www\.|<\s*a\b|href\s*=|\b[a-z0-9-]{3,}.(com|in|net|org|io|co|me|ly|info|biz|xyz|app|dev|link|site|online|store|tech|shop|live|page|gl|be|to)\b)/i;
 
   var steps = [
     { key: "name", q: "Hi! 👋 Welcome to NDR EdTech. Let's get you a free demo session.\n\nWhat's your full name?",
@@ -20,10 +22,12 @@
     { key: "email", q: "What's your email address?",
       type: "email", ph: "you@example.com",
       check: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || "Please enter a valid email address."; } },
+    { key: "qualification", q: "What is your highest qualification?", type: "select", options: QUALS, ph: "Select your qualification" },
     { key: "course", q: "Which course are you interested in?", type: "course", ph: "Select a course" },
     { key: "mode", q: "Which training mode do you prefer?", type: "chips", options: MODES },
-    { key: "message", q: "Anything else you'd like to tell us about your background and goals? (optional)",
-      type: "text", ph: "Type your message or tap Skip", optional: true }
+    { key: "message", q: "Please tell us a little about your background and goals.",
+      type: "text", ph: "Type your message",
+      check: function (v) { return !LINKRE.test(v) || "Links are not allowed. Please type your message without links."; } }
   ];
 
   var answers = {}, idx = 0, started = false;
@@ -67,11 +71,11 @@
     if (s.type === "chips") {
       foot.hidden = true;
       showChips(s.options, function (v) { answer(v); });
-    } else if (s.type === "course") {
-      var list = courseList();
+    } else if (s.type === "course" || s.type === "select") {
+      var list = s.type === "select" ? s.options : courseList();
       if (list) {
         select.innerHTML = "";
-        var o0 = el("option", "", "Select a course"); o0.value = ""; select.appendChild(o0);
+        var o0 = el("option", "", s.type === "select" ? s.ph : "Select a course"); o0.value = ""; select.appendChild(o0);
         list.forEach(function (n) { var o = el("option", "", n); o.value = n; select.appendChild(o); });
         select.style.display = ""; select.value = ""; select.focus();
       } else {
@@ -103,7 +107,7 @@
   }
 
   function buildText() {
-    var L = { name: "Name", phone: "Phone", email: "Email", course: "Course", mode: "Training Mode", message: "Message" };
+    var L = { name: "Name", phone: "Phone", email: "Email", qualification: "Qualification", course: "Course", mode: "Training Mode", message: "Message" };
     var lines = ["New Free Demo Request - NDR EdTech", ""];
     Object.keys(L).forEach(function (k) { if (answers[k]) lines.push("*" + L[k] + ":* " + answers[k]); });
     lines.push("", "(Sent from the NDR EdTech website chat)");
@@ -116,6 +120,7 @@
     bot("Thank you, " + answers.name.split(" ")[0] + "! 🎉 Opening WhatsApp to send your details to our career counsellor…");
     // Programmatic open is outside a click gesture for typed answers, so also show a button as fallback.
     var w = window.open(url, "_blank", "noopener");
+    if (window.ndrSaveLead) window.ndrSaveLead(answers, "chat:" + location.pathname.split("/").pop());
     var a = el("a", "ndr-send-wa", "Open WhatsApp & send");
     a.href = url; a.target = "_blank"; a.rel = "noopener";
     if (!w) bot("Your browser blocked the pop-up. Tap the button below to send your enquiry:");
@@ -154,7 +159,7 @@
     foot.addEventListener("submit", function (e) {
       e.preventDefault();
       var s = steps[idx];
-      answer(s.type === "course" && courseList() ? select.value : input.value);
+      answer((s.type === "select" || (s.type === "course" && courseList())) ? select.value : input.value);
     });
     select.addEventListener("change", function () { if (select.value) answer(select.value); });
     box.appendChild(head); box.appendChild(body); box.appendChild(foot);

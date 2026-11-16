@@ -14,6 +14,8 @@ window.prefillCourseSelect = prefillCourseSelect;
 
 const NAME_REGEX = /^[a-zA-Z\s.'-]{2,60}$/;
 const PHONE_REGEX = /^[6-9]\d{9}$/;
+/* Blocks URLs / hyperlinks in free-text fields */
+const LINK_REGEX = /(https?:\/\/|ftp:\/\/|www\.|<\s*a\b|href\s*=|\b[a-z0-9-]{3,}.(com|in|net|org|io|co|me|ly|info|biz|xyz|app|dev|link|site|online|store|tech|shop|live|page|gl|be|to)\b)/i;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function setupForm(form) {
@@ -64,10 +66,21 @@ function validateField(field) {
     case "required":
       valid = value.length > 0;
       break;
+    case "nolink":
+      valid = true;
+      break;
     default:
       valid = true;
   }
 
+  const err = group && group.querySelector(".form-error");
+  if (err && !err.dataset.orig) err.dataset.orig = err.textContent;
+  if (valid && (field.tagName === "TEXTAREA" || field.type === "text") && LINK_REGEX.test(value)) {
+    valid = false;
+    if (err) err.textContent = "Links are not allowed.";
+  } else if (err && err.dataset.orig) {
+    err.textContent = err.dataset.orig;
+  }
   if (group) group.classList.toggle("invalid", !valid);
   return valid;
 }
@@ -83,7 +96,7 @@ const FORM_WHATSAPP_NUMBER = "918722355666";
 function buildWhatsappMessage(form) {
   const heading = (form.getAttribute("data-wa-title") ||
     (form.querySelector('[name="mode"]') ? "New Free Demo Request" : "New Enquiry")) + " - NDR EdTech";
-  const labels = { name: "Name", phone: "Phone", email: "Email", course: "Course", mode: "Training Mode", message: "Message" };
+  const labels = { name: "Name", phone: "Phone", email: "Email", qualification: "Qualification", course: "Course", mode: "Training Mode", message: "Message" };
   const lines = [heading, ""];
   Object.keys(labels).forEach((key) => {
     const el = form.querySelector(`[name="${key}"]`);
@@ -107,6 +120,10 @@ function submitForm(form, successBox) {
   // Open synchronously (inside the click handler) so popup blockers allow it.
   const url = `https://wa.me/${FORM_WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsappMessage(form))}`;
   window.open(url, "_blank", "noopener");
+  // Also store the enquiry in the GoDaddy database (only the forms that collect qualification).
+  if (window.ndrSaveLead && form.querySelector('[name="qualification"]')) {
+    window.ndrSaveLead(window.ndrFormData(form), "form:" + location.pathname.split("/").pop());
+  }
 
   setTimeout(() => {
     form.reset();
