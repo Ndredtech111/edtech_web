@@ -1,0 +1,55 @@
+NDR EdTech Website — Proprietary License
+
+Copyright (c) 2026 NDR EdTech. All rights reserved.
+
+This repository contains the source code, design, text, images, logo and other
+content of the NDR EdTech website (the "Software"). It is published for the
+purpose of hosting the NDR EdTech website and is NOT open-source software.
+
+1. OWNERSHIP
+   The Software and all intellectual property in it, including the NDR EdTech
+   name, logo and branding, belong to NDR EdTech.
+
+2. PERMITTED USE
+   You may view the Software and run it locally for evaluation. Authorised
+   members of NDR EdTech and people it has approved in writing may modify and
+   deploy it for NDR EdTech.
+
+3. RESTRICTIONS
+   Without prior written permission from NDR EdTech you may NOT:
+   a) copy, modify, merge, publish, distribute, sublicense or sell the Software
+      or any substantial part of it;
+   b) use the NDR EdTech name, logo, course content, learner names or reviews
+      for any other website, product or service;
+   c) remove or alter this notice or any copyright notice.
+
+4. PERSONAL DATA
+   Learner names and reviews, and any enquiry data collected through the
+   website's forms, are personal data. They are not licensed for reuse and must
+   not be copied or republished.
+
+   SECURITY AND ACCEPTABLE USE
+   You must not: (a) attempt to gain unauthorised access to the website's
+   servers, database, hosting or domain accounts; (b) probe, scan or test the
+   website's security, or run automated attacks, spam or bulk form submissions
+   against it, without written permission from NDR EdTech; (c) disrupt or
+   overload the service; or (d) access, copy or disclose enquiry data
+   submitted by visitors. Security researchers acting in good faith who report
+   a vulnerability privately (see AUTHORS) and do not access or keep personal
+   data will not be pursued for that report. Passwords, API keys, database
+   credentials and server configuration files are confidential and must never
+   be committed to this repository.
+
+5. THIRD-PARTY COMPONENTS
+   Third-party fonts, libraries and services (for example Google Fonts, Google
+   Maps embeds, YouTube) remain under their own licences and terms, which are
+   not changed by this licence.
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+   NDR EDTECH BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM
+   THE USE OF THE SOFTWARE.
+
+For permission requests, contact NDR EdTech through https://ndredtech.com/contact.html
